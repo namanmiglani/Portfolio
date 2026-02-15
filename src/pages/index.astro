@@ -81,9 +81,6 @@
 							<button type="button" data-tab="experience">Experience.md</button>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="about" data-target="education">Education.md</button>
-						</li>
-						<li class="file indent">
 							<button type="button" data-tab="projects">Projects.tsx</button>
 						</li>
 						<li class="file indent">
@@ -103,7 +100,7 @@
 					</div>
 					<div class="grid">
 						<div class="tab-panel active" data-tab-panel="about">
-							<article class="card span-2" id="about">
+							<article class="card" id="about">
 								<h2>About</h2>
 								<p>
 									I’m a computer science student at UBC with a 4.33 GPA. I build full-stack
@@ -120,7 +117,7 @@
 								</div>
 							</article>
 
-							<article class="card span-2" id="working">
+							<article class="card" id="working">
 								<h2>Currently working on</h2>
 								<ul>
 									<li>MLB Scoreboard Chrome Extension — 350+ daily active users.</li>
@@ -301,11 +298,10 @@
 						<div class="tab-panel" data-tab-panel="resume">
 							<article class="card span-2 resume-panel">
 								<h2>Resume</h2>
-								<div class="resume-frame">
-									<iframe src="/resume.pdf" title="Naman Miglani Resume"></iframe>
-									<p class="muted">
-										Can’t view it here? <a href="/resume.pdf" target="_blank" rel="noreferrer">Open in a new tab</a>.
-									</p>
+								<p class="muted">Opening resume in a new tab…</p>
+								<div class="resume-actions">
+									<a class="button primary" href="/resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
+									<a class="button" href="/resume.pdf" download>Download Resume</a>
 								</div>
 							</article>
 						</div>
@@ -329,6 +325,7 @@
 
 			const tabs = document.querySelectorAll('[data-tab]');
 			const panels = document.querySelectorAll('[data-tab-panel]');
+			let resumeOpened = false;
 
 			const setActiveTab = (tabKey) => {
 				tabs.forEach((tab) => {
@@ -337,6 +334,10 @@
 				panels.forEach((panel) => {
 					panel.classList.toggle('active', panel.dataset.tabPanel === tabKey);
 				});
+				if (tabKey === 'resume' && !resumeOpened) {
+					window.open('/resume.pdf', '_blank');
+					resumeOpened = true;
+				}
 			};
 
 			const writeLine = (text, cls = '') => {
@@ -637,6 +638,12 @@
 		padding: 0;
 		cursor: pointer;
 		text-align: left;
+		width: 100%;
+	}
+
+	.file button.active {
+		color: var(--text);
+		font-weight: 600;
 	}
 
 	.indent {
@@ -750,18 +757,10 @@
 		gap: 16px;
 	}
 
-	.resume-frame {
-		display: grid;
+	.resume-actions {
+		display: flex;
+		flex-wrap: wrap;
 		gap: 12px;
-	}
-
-	.resume-frame iframe {
-		width: 100%;
-		min-height: 680px;
-		height: 72vh;
-		border: 1px solid var(--border);
-		border-radius: 16px;
-		background: #fff;
 	}
 
 	.project-media {
