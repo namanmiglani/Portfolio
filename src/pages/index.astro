@@ -74,12 +74,24 @@
 					<div class="ide__title">EXPLORER</div>
 					<ul>
 						<li class="folder">src</li>
-						<li class="file indent">About.md</li>
-						<li class="file indent">Experience.md</li>
-						<li class="file indent">Education.md</li>
-						<li class="file indent">Projects.tsx</li>
-						<li class="file indent">Contact.tsx</li>
-						<li class="file">public/resume.pdf</li>
+						<li class="file indent">
+							<button type="button" data-tab="about">About.md</button>
+						</li>
+						<li class="file indent">
+							<button type="button" data-tab="experience">Experience.md</button>
+						</li>
+						<li class="file indent">
+							<button type="button" data-tab="about" data-target="education">Education.md</button>
+						</li>
+						<li class="file indent">
+							<button type="button" data-tab="projects">Projects.tsx</button>
+						</li>
+						<li class="file indent">
+							<button type="button" data-tab="about" data-target="contact">Contact.tsx</button>
+						</li>
+						<li class="file">
+							<button type="button" data-tab="resume">public/resume.pdf</button>
+						</li>
 					</ul>
 				</div>
 				<div class="ide__main">
@@ -87,12 +99,11 @@
 						<button class="tab active" type="button" data-tab="about">About.md</button>
 						<button class="tab" type="button" data-tab="experience">Experience.md</button>
 						<button class="tab" type="button" data-tab="projects">Projects.tsx</button>
-						<button class="tab" type="button" data-tab="contact">Contact.tsx</button>
 						<button class="tab" type="button" data-tab="resume">resume.pdf</button>
 					</div>
 					<div class="grid">
 						<div class="tab-panel active" data-tab-panel="about">
-							<article class="card span-2">
+							<article class="card span-2" id="about">
 								<h2>About</h2>
 								<p>
 									I’m a computer science student at UBC with a 4.33 GPA. I build full-stack
@@ -109,7 +120,15 @@
 								</div>
 							</article>
 
-							<article class="card">
+							<article class="card span-2" id="working">
+								<h2>Currently working on</h2>
+								<ul>
+									<li>MLB Scoreboard Chrome Extension — 350+ daily active users.</li>
+									<li>Jarvis — multimodal AI agent with real-time vision and voice.</li>
+								</ul>
+							</article>
+
+							<article class="card span-2" id="education">
 								<h2>Education</h2>
 								<h3>University of British Columbia</h3>
 								<p>B.Sc. Computer Science (GPA 4.33/4.33)</p>
@@ -120,7 +139,7 @@
 								</p>
 							</article>
 
-							<article class="card">
+							<article class="card span-2" id="skills">
 								<h2>Technical Skills</h2>
 								<p class="muted">Languages, frameworks, tools, and libraries I use daily.</p>
 								<div class="pill-group">
@@ -139,15 +158,7 @@
 								</div>
 							</article>
 
-							<article class="card">
-								<h2>Currently working on</h2>
-								<ul>
-									<li>MLB Scoreboard Chrome Extension — 350+ daily active users.</li>
-									<li>Jarvis — multimodal AI agent with real-time vision and voice.</li>
-								</ul>
-							</article>
-
-							<article class="card span-2">
+							<article class="card span-2" id="contact">
 								<h2>Contact</h2>
 								<p class="muted">Send a message and I’ll reply quickly.</p>
 								<form
@@ -188,146 +199,102 @@
 
 						<div class="tab-panel" data-tab-panel="experience">
 							<article class="card span-2">
-								<h2>Experience</h2>
-								<div class="timeline">
-									<div>
-										<h3>Software Engineer Intern — BC Liquor Distribution Branch</h3>
-										<p class="muted">Jan 2025 – Aug 2025 · Vancouver, BC</p>
-										<ul>
-											<li>
-												Upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java
-												17/Spring Boot 3 for inventory and sales systems.
-											</li>
-											<li>
-												Built SAML 2.0 single sign-on across 10 apps, reducing daily
-												authentication friction by 90%.
-											</li>
-											<li>
-												Resolved production defects and improved CI/CD deployment
-												cycles by 40%.
-											</li>
-										</ul>
-									</div>
-									<div>
-										<h3>Teaching Assistant — CPSC 110</h3>
-										<p class="muted">Sep 2024 – Jan 2025 · UBC Vancouver, BC</p>
-										<ul>
-											<li>
-												Led lab sessions and office hours for 1500+ students, translating
-												CS concepts into solutions.
-											</li>
-											<li>
-												Conducted 100+ weekly code reviews, emphasizing TDD and
-												documentation practices.
-											</li>
-										</ul>
-									</div>
-									<div>
-										<h3>Software Engineer Intern — Cynomatic Cyber Solutions</h3>
-										<p class="muted">May 2024 – Aug 2024 · Calgary, AB</p>
-										<ul>
-											<li>
-												Built an enterprise GenAI agent using LangChain and ChromaDB
-												for 100+ internal documents.
-											</li>
-											<li>
-												Engineered a React interface that increased site traffic and
-												inbound lead generation by 20%.
-											</li>
-											<li>
-												Automated marketing workflows in Python, increasing customer
-												inquiries by 30%.
-											</li>
-										</ul>
-									</div>
-								</div>
+								<h2>Software Engineer Intern — BC Liquor Distribution Branch</h2>
+								<p class="muted">Jan 2025 – Aug 2025 · Vancouver, BC</p>
+								<ul>
+									<li>
+										Upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java 17/Spring Boot 3
+										for inventory and sales systems.
+									</li>
+									<li>
+										Built SAML 2.0 single sign-on across 10 apps, reducing daily authentication
+										friction by 90%.
+									</li>
+									<li>
+										Resolved production defects and improved CI/CD deployment cycles by 40%.
+									</li>
+								</ul>
+							</article>
+
+							<article class="card span-2">
+								<h2>Teaching Assistant — CPSC 110</h2>
+								<p class="muted">Sep 2024 – Jan 2025 · UBC Vancouver, BC</p>
+								<ul>
+									<li>
+										Led lab sessions and office hours for 1500+ students, translating CS concepts
+										into solutions.
+									</li>
+									<li>
+										Conducted 100+ weekly code reviews, emphasizing TDD and documentation
+										practices.
+									</li>
+								</ul>
+							</article>
+
+							<article class="card span-2">
+								<h2>Software Engineer Intern — Cynomatic Cyber Solutions</h2>
+								<p class="muted">May 2024 – Aug 2024 · Calgary, AB</p>
+								<ul>
+									<li>
+										Built an enterprise GenAI agent using LangChain and ChromaDB for 100+ internal
+										documents.
+									</li>
+									<li>
+										Engineered a React interface that increased site traffic and inbound lead
+										generation by 20%.
+									</li>
+									<li>
+										Automated marketing workflows in Python, increasing customer inquiries by 30%.
+									</li>
+								</ul>
 							</article>
 						</div>
 
 						<div class="tab-panel" data-tab-panel="projects">
 							<article class="card span-2">
-								<h2>Projects</h2>
-								<div class="projects">
-									<div>
-										<h3>MLB Scoreboard Chrome Extension</h3>
-										<p class="muted">May 2024 – Present · HTML, CSS, JS, Express, Node.js</p>
-										<ul>
-											<li>350+ daily active users and 1.2k+ total installs.</li>
-											<li>
-												AI recap endpoint using AWS Bedrock with caching, reducing
-												response times by 40%.
-										</li>
-										<li>
-											Express REST API with PostgreSQL (Supabase) for real-time
-											updates.
-										</li>
-									</ul>
-									</div>
-									<div>
-										<h3>Jarvis</h3>
-										<p class="muted">Jan 2026 · LangGraph, OpenCV, Whisper, PyQt5</p>
-										<ul>
-											<li>Multimodal AI agent with real-time vision, OCR, and voice.</li>
-											<li>
-												Async Python backend with WebSockets for low-latency interactions.
-										</li>
-										<li>60 FPS HUD rendering with PyQt5 and OpenCV.</li>
-									</ul>
-									</div>
-									<div>
-										<h3>Emotion Playlist Generator</h3>
-										<p class="muted">Jul 2025 – Aug 2025 · AWS Lambda, Rekognition</p>
-										<ul>
-											<li>Mood-based Spotify playlist generation.</li>
-											<li>
-												Emotion recognition pipeline with AWS Rekognition and Lambda.
-										</li>
-										<li>
-											API Gateway integration for frontend communication.
-										</li>
-									</ul>
-									</div>
+								<h2>MLB Scoreboard Chrome Extension</h2>
+								<p class="muted">May 2024 – Present · HTML, CSS, JS, Express, Node.js</p>
+								<ul>
+									<li>350+ daily active users and 1.2k+ total installs.</li>
+									<li>
+										AI recap endpoint using AWS Bedrock with caching, reducing response times by 40%.
+									</li>
+									<li>
+										Express REST API with PostgreSQL (Supabase) for real-time updates.
+									</li>
+								</ul>
+								<div class="project-media">
+									<div class="project-image">Project preview</div>
+									<a class="button" href="#" aria-disabled="true">View Demo</a>
 								</div>
 							</article>
-						</div>
 
-						<div class="tab-panel" data-tab-panel="contact">
 							<article class="card span-2">
-								<h2>Contact</h2>
-								<p class="muted">Send a message and I’ll reply quickly.</p>
-								<form
-									name="contact"
-									method="POST"
-									data-netlify="true"
-									netlify-honeypot="bot-field"
-									class="contact-form"
-								>
-									<input type="hidden" name="form-name" value="contact" />
-									<p class="hidden">
-										<label>
-											Don’t fill this out if you're human: <input name="bot-field" />
-										</label>
-									</p>
-									<div class="form-row">
-										<label>
-											Name
-											<input type="text" name="name" required />
-										</label>
-										<label>
-											Email
-											<input type="email" name="email" required />
-										</label>
-									</div>
-									<label>
-										Company
-										<input type="text" name="company" />
-									</label>
-									<label>
-										Message
-										<textarea name="message" rows="4" required></textarea>
-									</label>
-									<button type="submit" class="button primary">Send Message</button>
-								</form>
+								<h2>Jarvis</h2>
+								<p class="muted">Jan 2026 · LangGraph, OpenCV, Whisper, PyQt5</p>
+								<ul>
+									<li>Multimodal AI agent with real-time vision, OCR, and voice.</li>
+									<li>Async Python backend with WebSockets for low-latency interactions.</li>
+									<li>60 FPS HUD rendering with PyQt5 and OpenCV.</li>
+								</ul>
+								<div class="project-media">
+									<div class="project-image">Project preview</div>
+									<a class="button" href="#" aria-disabled="true">View Demo</a>
+								</div>
+							</article>
+
+							<article class="card span-2">
+								<h2>Emotion Playlist Generator</h2>
+								<p class="muted">Jul 2025 – Aug 2025 · AWS Lambda, Rekognition</p>
+								<ul>
+									<li>Mood-based Spotify playlist generation.</li>
+									<li>Emotion recognition pipeline with AWS Rekognition and Lambda.</li>
+									<li>API Gateway integration for frontend communication.</li>
+								</ul>
+								<div class="project-media">
+									<div class="project-image">Project preview</div>
+									<a class="button" href="#" aria-disabled="true">View Demo</a>
+								</div>
 							</article>
 						</div>
 
@@ -395,7 +362,17 @@
 			};
 
 			tabs.forEach((tab) =>
-				tab.addEventListener('click', () => setActiveTab(tab.dataset.tab || 'about'))
+				tab.addEventListener('click', () => {
+					const tabKey = tab.dataset.tab || 'about';
+					setActiveTab(tabKey);
+					const targetId = tab.dataset.target;
+					if (targetId) {
+						const target = document.getElementById(targetId);
+						if (target) {
+							target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						}
+					}
+				})
 			);
 
 			form.addEventListener('submit', (event) => {
@@ -652,6 +629,16 @@
 		margin-bottom: 6px;
 	}
 
+	.file button {
+		border: none;
+		background: none;
+		font: inherit;
+		color: inherit;
+		padding: 0;
+		cursor: pointer;
+		text-align: left;
+	}
+
 	.indent {
 		padding-left: 16px;
 	}
@@ -770,10 +757,29 @@
 
 	.resume-frame iframe {
 		width: 100%;
-		min-height: 520px;
+		min-height: 680px;
+		height: 72vh;
 		border: 1px solid var(--border);
 		border-radius: 16px;
 		background: #fff;
+	}
+
+	.project-media {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		margin-top: 16px;
+	}
+
+	.project-image {
+		height: 160px;
+		border-radius: 14px;
+		border: 1px dashed var(--border);
+		background: var(--surface-alt);
+		display: grid;
+		place-items: center;
+		color: var(--muted);
+		font-size: 0.85rem;
 	}
 
 	.contact-form {
