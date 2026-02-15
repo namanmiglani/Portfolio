@@ -1,5 +1,5 @@
 ---
-
+const year = new Date().getFullYear();
 ---
 
 <html lang="en">
@@ -7,11 +7,855 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Naman Miglani | Computer Science Portfolio</title>
+		<meta
+			name="description"
+			content="Naman Miglani — Computer Science portfolio with projects, experience, and interactive demos."
+		/>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="page">
+			<header class="hero" id="top">
+				<div class="hero__copy">
+					<p class="eyebrow">Computer Science Portfolio</p>
+					<h1>Naman Miglani</h1>
+					<p class="subtitle">
+						Software engineer with experience in AI systems, enterprise Java, and full-stack
+						applications. Building reliable products with thoughtful design and measurable
+						impact.
+					</p>
+					<div class="hero__cta">
+						<a class="button primary" href="/resume.pdf" download>Download Resume</a>
+						<a class="button" href="#contact">Contact Me</a>
+					</div>
+					<div class="hero__links">
+						<a href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+						<span aria-hidden="true">•</span>
+						<a
+							href="https://linkedin.com/in/naman-miglani"
+							target="_blank"
+							rel="noreferrer"
+						>LinkedIn</a
+						>
+						<span aria-hidden="true">•</span>
+						<a href="mailto:namanmiglani5@gmail.com">namanmiglani5@gmail.com</a>
+					</div>
+				</div>
+				<div class="hero__panel">
+					<div class="terminal" aria-label="Terminal navigation">
+						<div class="terminal__title">
+							<span class="dot red"></span>
+							<span class="dot yellow"></span>
+							<span class="dot green"></span>
+							<span>terminal</span>
+						</div>
+						<div class="terminal__body" id="terminal-output">
+							<p><span class="prompt">naman@portfolio</span>:~$ help</p>
+							<p class="muted">Available commands: cd ./about, cd ./experience, cd ./projects, cd ./contact, open resume.pdf</p>
+						</div>
+						<form class="terminal__input" id="terminal-form">
+							<label class="prompt" for="terminal-cmd">naman@portfolio:~$</label>
+							<input id="terminal-cmd" name="cmd" type="text" placeholder="cd ./projects" autocomplete="off" />
+						</form>
+						<div class="terminal__shortcuts">
+							<button type="button" data-cmd="cd ./about">cd ./about</button>
+							<button type="button" data-cmd="cd ./projects">cd ./projects</button>
+							<button type="button" data-cmd="cd ./contact">cd ./contact</button>
+							<button type="button" data-cmd="open resume.pdf">open resume.pdf</button>
+						</div>
+					</div>
+					<div class="status-card">
+						<h3>Currently working on</h3>
+						<ul>
+							<li>MLB Scoreboard Chrome Extension — 350+ daily active users.</li>
+							<li>Jarvis — multimodal AI agent with real-time vision and voice.</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+			<section class="ide" aria-label="IDE inspired layout">
+				<div class="ide__sidebar">
+					<div class="ide__title">EXPLORER</div>
+					<ul>
+						<li class="folder">src</li>
+						<li class="file indent">About.md</li>
+						<li class="file indent">Experience.md</li>
+						<li class="file indent">Education.md</li>
+						<li class="file indent">Projects.tsx</li>
+						<li class="file indent">Contact.tsx</li>
+						<li class="file">public/resume.pdf</li>
+					</ul>
+				</div>
+				<div class="ide__main">
+					<div class="ide__tabs">
+						<div class="tab active">About.md</div>
+						<div class="tab">Experience.md</div>
+						<div class="tab">Projects.tsx</div>
+						<div class="tab">Contact.tsx</div>
+					</div>
+					<div class="grid">
+						<article class="card span-2" id="about">
+							<h2>About</h2>
+							<p>
+								I’m a computer science student at UBC with a 4.33 GPA. I build full-stack
+								software with a focus on AI systems, enterprise reliability, and clean UI. I
+								care about performance, secure systems, and shipping measurable results.
+							</p>
+							<div class="pill-group">
+								<span>Java</span>
+								<span>Python</span>
+								<span>TypeScript</span>
+								<span>React</span>
+								<span>Spring Boot</span>
+								<span>AWS</span>
+							</div>
+						</article>
+
+						<article class="card" id="education">
+							<h2>Education</h2>
+							<h3>University of British Columbia</h3>
+							<p>B.Sc. Computer Science (GPA 4.33/4.33)</p>
+							<p class="muted">Vancouver, BC · Sep 2023 – Apr 2027</p>
+							<p class="muted">
+								Relevant: Data Structures and Algorithms, Object-Oriented Design, Computer
+								Systems, Machine Learning
+							</p>
+						</article>
+
+						<article class="card" id="experience">
+							<h2>Experience</h2>
+							<div class="timeline">
+								<div>
+									<h3>Software Engineer Intern — BC Liquor Distribution Branch</h3>
+									<p class="muted">Jan 2025 – Aug 2025 · Vancouver, BC</p>
+									<ul>
+										<li>
+											Upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java
+											17/Spring Boot 3 for inventory and sales systems.
+										</li>
+										<li>
+											Built SAML 2.0 single sign-on across 10 apps, reducing daily
+											authentication friction by 90%.
+										</li>
+										<li>
+											Resolved production defects and improved CI/CD deployment
+											cycles by 40%.
+										</li>
+									</ul>
+								</div>
+								<div>
+									<h3>Teaching Assistant — CPSC 110</h3>
+									<p class="muted">Sep 2024 – Jan 2025 · UBC Vancouver, BC</p>
+									<ul>
+										<li>
+											Led lab sessions and office hours for 1500+ students, translating
+											CS concepts into solutions.
+										</li>
+										<li>
+											Conducted 100+ weekly code reviews, emphasizing TDD and
+											documentation practices.
+										</li>
+									</ul>
+								</div>
+								<div>
+									<h3>Software Engineer Intern — Cynomatic Cyber Solutions</h3>
+									<p class="muted">May 2024 – Aug 2024 · Calgary, AB</p>
+									<ul>
+										<li>
+											Built an enterprise GenAI agent using LangChain and ChromaDB
+											for 100+ internal documents.
+										</li>
+										<li>
+											Engineered a React interface that increased site traffic and
+											inbound lead generation by 20%.
+										</li>
+										<li>
+											Automated marketing workflows in Python, increasing customer
+											inquiries by 30%.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+
+						<article class="card span-2" id="projects">
+							<h2>Projects</h2>
+							<div class="projects">
+								<div>
+									<h3>MLB Scoreboard Chrome Extension</h3>
+									<p class="muted">May 2024 – Present · HTML, CSS, JS, Express, Node.js</p>
+									<ul>
+										<li>350+ daily active users and 1.2k+ total installs.</li>
+										<li>
+											AI recap endpoint using AWS Bedrock with caching, reducing
+											response times by 40%.
+										</li>
+										<li>
+											Express REST API with PostgreSQL (Supabase) for real-time
+											updates.
+										</li>
+									</ul>
+								</div>
+								<div>
+									<h3>Jarvis</h3>
+									<p class="muted">Jan 2026 · LangGraph, OpenCV, Whisper, PyQt5</p>
+									<ul>
+										<li>Multimodal AI agent with real-time vision, OCR, and voice.</li>
+										<li>
+											Async Python backend with WebSockets for low-latency interactions.
+										</li>
+										<li>60 FPS HUD rendering with PyQt5 and OpenCV.</li>
+									</ul>
+								</div>
+								<div>
+									<h3>Emotion Playlist Generator</h3>
+									<p class="muted">Jul 2025 – Aug 2025 · AWS Lambda, Rekognition</p>
+									<ul>
+										<li>Mood-based Spotify playlist generation.</li>
+										<li>
+											Emotion recognition pipeline with AWS Rekognition and Lambda.
+										</li>
+										<li>
+											API Gateway integration for frontend communication.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</article>
+
+						<article class="card" id="skills">
+							<h2>Technical Skills</h2>
+							<p class="muted">Languages, frameworks, tools, and libraries I use daily.</p>
+							<div class="pill-group">
+								<span>Java</span>
+								<span>Python</span>
+								<span>C/C++</span>
+								<span>SQL</span>
+								<span>TypeScript</span>
+								<span>React</span>
+								<span>Spring Boot</span>
+								<span>AWS</span>
+								<span>PostgreSQL</span>
+								<span>Scikit-learn</span>
+								<span>OpenCV</span>
+								<span>Hugging Face</span>
+							</div>
+						</article>
+
+						<article class="card" id="playground">
+							<h2>API Playground</h2>
+							<p class="muted">Simulated requests recruiters can explore.</p>
+							<div class="playground">
+								<div class="playground__controls">
+									<button type="button" data-response="contact">Send Contact Info</button>
+									<button type="button" data-response="project">Demo Project</button>
+									<button type="button" data-response="resume">Download Resume</button>
+								</div>
+								<pre class="playground__output" id="api-output"></pre>
+							</div>
+						</article>
+
+						<article class="card span-2" id="contact">
+							<h2>Contact</h2>
+							<p class="muted">Send a message and I’ll reply quickly.</p>
+							<form
+								name="contact"
+								method="POST"
+								data-netlify="true"
+								netlify-honeypot="bot-field"
+								class="contact-form"
+							>
+								<input type="hidden" name="form-name" value="contact" />
+								<p class="hidden">
+									<label>
+										Don’t fill this out if you're human: <input name="bot-field" />
+									</label>
+								</p>
+								<div class="form-row">
+									<label>
+										Name
+										<input type="text" name="name" required />
+									</label>
+									<label>
+										Email
+										<input type="email" name="email" required />
+									</label>
+								</div>
+								<label>
+									Company
+									<input type="text" name="company" />
+								</label>
+								<label>
+									Message
+									<textarea name="message" rows="4" required></textarea>
+								</label>
+								<button type="submit" class="button primary">Send Message</button>
+							</form>
+						</article>
+					</div>
+					<div class="status-bar">
+						<span>Git Branch: Main</span>
+						<span>Line 1, Col 1</span>
+						<span>UTF-8</span>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer class="footer">
+			<p>© {year} Naman Miglani. Built with Astro.</p>
+		</footer>
+
+		<script>
+			const output = document.getElementById('terminal-output');
+			const form = document.getElementById('terminal-form');
+			const input = document.getElementById('terminal-cmd');
+			const shortcuts = document.querySelectorAll('[data-cmd]');
+			const apiOutput = document.getElementById('api-output');
+			const apiButtons = document.querySelectorAll('[data-response]');
+
+			const commands = {
+				'cd ./about': '#about',
+				'cd ./experience': '#experience',
+				'cd ./projects': '#projects',
+				'cd ./contact': '#contact',
+				'open resume.pdf': '/resume.pdf'
+			};
+
+			const apiResponses = {
+				contact: {
+					status: 201,
+					message: 'Contact received',
+					data: {
+						name: 'Recruiter Name',
+						email: 'recruiter@company.com',
+						company: 'Company Inc.',
+						timestamp: new Date().toISOString()
+					}
+				},
+				project: {
+					status: 200,
+					message: 'Project demo ready',
+					data: {
+						project: 'MLB Scoreboard Extension',
+						users: 350,
+						installs: 1200,
+						latency_ms: 120
+					}
+				},
+				resume: {
+					status: 302,
+					message: 'Redirecting to resume.pdf',
+					data: { url: '/resume.pdf' }
+				}
+			};
+
+			const writeLine = (text, cls = '') => {
+				const line = document.createElement('p');
+				if (cls) line.classList.add(cls);
+				line.textContent = text;
+				output.appendChild(line);
+				output.scrollTop = output.scrollHeight;
+			};
+
+			const runCommand = (cmd) => {
+				const trimmed = cmd.trim();
+				if (!trimmed) return;
+				writeLine(`naman@portfolio:~$ ${trimmed}`);
+				if (commands[trimmed]) {
+					if (trimmed.startsWith('open')) {
+						window.open(commands[trimmed], '_blank');
+						writeLine('Opening resume.pdf...');
+						return;
+					}
+					const target = document.querySelector(commands[trimmed]);
+					if (target) {
+						target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+						writeLine(`Navigated to ${commands[trimmed]}`);
+					}
+				} else if (trimmed === 'help') {
+					writeLine('Available commands: cd ./about, cd ./experience, cd ./projects, cd ./contact, open resume.pdf');
+				} else {
+					writeLine('Command not found. Type help for options.', 'muted');
+				}
+			};
+
+			form.addEventListener('submit', (event) => {
+				event.preventDefault();
+				runCommand(input.value);
+				input.value = '';
+			});
+
+			shortcuts.forEach((btn) =>
+				btn.addEventListener('click', () => {
+					runCommand(btn.dataset.cmd || '');
+				})
+			);
+
+			const renderResponse = (type) => {
+				const payload = apiResponses[type];
+				if (!payload) return;
+				apiOutput.textContent = JSON.stringify(payload, null, 2);
+			};
+
+			apiButtons.forEach((btn) =>
+				btn.addEventListener('click', () => renderResponse(btn.dataset.response))
+			);
+
+			renderResponse('contact');
+		</script>
 	</body>
 </html>
+
+<style>
+	:root {
+		color-scheme: light;
+		--bg: #f7f7fb;
+		--surface: #ffffff;
+		--surface-alt: #f0f2f7;
+		--text: #141824;
+		--muted: #586174;
+		--accent: #2b6bf3;
+		--accent-soft: rgba(43, 107, 243, 0.12);
+		--border: rgba(20, 24, 36, 0.08);
+		--shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+		--radius-lg: 24px;
+		--radius-md: 16px;
+		--radius-sm: 12px;
+	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter",
+			"Segoe UI", sans-serif;
+		background: radial-gradient(circle at top, #eef2ff 0%, #f7f7fb 55%, #ffffff 100%);
+		color: var(--text);
+		line-height: 1.6;
+	}
+
+	a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	.page {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 48px 24px 80px;
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+	}
+
+	.hero {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 32px;
+		align-items: start;
+	}
+
+	.hero__copy h1 {
+		font-size: clamp(2.6rem, 4vw, 3.6rem);
+		margin-bottom: 12px;
+	}
+
+	.eyebrow {
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		font-size: 0.75rem;
+		color: var(--muted);
+		margin-bottom: 16px;
+	}
+
+	.subtitle {
+		font-size: 1.1rem;
+		color: var(--muted);
+		max-width: 520px;
+	}
+
+	.hero__cta {
+		display: flex;
+		gap: 12px;
+		margin: 24px 0 16px;
+		flex-wrap: wrap;
+	}
+
+	.hero__links {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		color: var(--muted);
+		flex-wrap: wrap;
+	}
+
+	.button {
+		border: 1px solid var(--border);
+		background: var(--surface);
+		color: var(--text);
+		padding: 10px 18px;
+		border-radius: 999px;
+		font-weight: 600;
+		box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
+	}
+
+	.button.primary {
+		background: var(--accent);
+		color: #fff;
+		border-color: transparent;
+	}
+
+	.hero__panel {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.terminal,
+	.status-card {
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow);
+	}
+
+	.terminal__title {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 12px 16px;
+		border-bottom: 1px solid var(--border);
+		font-size: 0.85rem;
+		color: var(--muted);
+	}
+
+	.dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		display: inline-block;
+	}
+
+	.dot.red {
+		background: #ff5f56;
+	}
+
+	.dot.yellow {
+		background: #ffbd2e;
+	}
+
+	.dot.green {
+		background: #27c93f;
+	}
+
+	.terminal__body {
+		padding: 16px;
+		max-height: 220px;
+		overflow-y: auto;
+		font-family: "SF Mono", "Fira Code", monospace;
+		font-size: 0.85rem;
+	}
+
+	.prompt {
+		color: #3d7eff;
+		font-weight: 600;
+		margin-right: 6px;
+	}
+
+	.terminal__input {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		padding: 12px 16px 16px;
+		border-top: 1px solid var(--border);
+	}
+
+	.terminal__input input {
+		flex: 1;
+		border: none;
+		background: transparent;
+		font-family: "SF Mono", "Fira Code", monospace;
+		font-size: 0.9rem;
+		color: var(--text);
+		outline: none;
+	}
+
+	.terminal__shortcuts {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		padding: 0 16px 16px;
+	}
+
+	.terminal__shortcuts button {
+		border: 1px solid var(--border);
+		background: var(--surface-alt);
+		border-radius: 999px;
+		padding: 6px 12px;
+		font-size: 0.75rem;
+		cursor: pointer;
+	}
+
+	.status-card {
+		padding: 18px;
+	}
+
+	.status-card h3 {
+		margin-bottom: 10px;
+	}
+
+	.status-card ul {
+		padding-left: 18px;
+		color: var(--muted);
+	}
+
+	.ide {
+		display: grid;
+		grid-template-columns: minmax(200px, 230px) 1fr;
+		gap: 0;
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		box-shadow: var(--shadow);
+	}
+
+	.ide__sidebar {
+		background: #f3f4f8;
+		padding: 20px;
+		border-right: 1px solid var(--border);
+	}
+
+	.ide__title {
+		font-size: 0.75rem;
+		letter-spacing: 0.15em;
+		color: var(--muted);
+		margin-bottom: 16px;
+	}
+
+	.ide__sidebar ul {
+		list-style: none;
+		font-size: 0.9rem;
+		color: var(--text);
+	}
+
+	.folder {
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+
+	.file {
+		color: var(--muted);
+		margin-bottom: 6px;
+	}
+
+	.indent {
+		padding-left: 16px;
+	}
+
+	.ide__main {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.ide__tabs {
+		display: flex;
+		gap: 8px;
+		padding: 12px 16px;
+		background: var(--surface-alt);
+		border-bottom: 1px solid var(--border);
+		flex-wrap: wrap;
+	}
+
+	.tab {
+		padding: 6px 12px;
+		border-radius: 10px;
+		background: transparent;
+		color: var(--muted);
+		font-size: 0.85rem;
+	}
+
+	.tab.active {
+		background: #fff;
+		color: var(--text);
+		box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 20px;
+		padding: 24px;
+		background: #fff;
+	}
+
+	.card {
+		background: var(--surface);
+		border: 1px solid var(--border);
+		border-radius: var(--radius-md);
+		padding: 20px;
+		box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+	}
+
+	.card h2 {
+		margin-bottom: 12px;
+	}
+
+	.card h3 {
+		margin: 10px 0 4px;
+	}
+
+	.span-2 {
+		grid-column: span 2;
+	}
+
+	.muted {
+		color: var(--muted);
+	}
+
+	.pill-group {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+		margin-top: 12px;
+	}
+
+	.pill-group span {
+		background: var(--accent-soft);
+		color: var(--accent);
+		border-radius: 999px;
+		padding: 6px 12px;
+		font-size: 0.75rem;
+		font-weight: 600;
+	}
+
+	.timeline {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.timeline ul,
+	.projects ul {
+		padding-left: 18px;
+		color: var(--muted);
+	}
+
+	.projects {
+		display: grid;
+		gap: 16px;
+	}
+
+	.playground {
+		display: grid;
+		gap: 12px;
+	}
+
+	.playground__controls {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.playground__controls button {
+		border: 1px solid var(--border);
+		background: var(--surface-alt);
+		border-radius: 10px;
+		padding: 8px 12px;
+		font-size: 0.8rem;
+		cursor: pointer;
+	}
+
+	.playground__output {
+		background: #0f172a;
+		color: #e2e8f0;
+		padding: 16px;
+		border-radius: 12px;
+		font-size: 0.8rem;
+		min-height: 160px;
+		overflow-x: auto;
+	}
+
+	.contact-form {
+		display: grid;
+		gap: 12px;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 12px;
+	}
+
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 10px 12px;
+		font-family: inherit;
+	}
+
+	.contact-form button {
+		justify-self: start;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.status-bar {
+		display: flex;
+		justify-content: space-between;
+		padding: 10px 16px;
+		background: #0f172a;
+		color: #94a3b8;
+		font-size: 0.75rem;
+		font-family: "SF Mono", "Fira Code", monospace;
+	}
+
+	.footer {
+		text-align: center;
+		padding: 24px;
+		color: var(--muted);
+		font-size: 0.85rem;
+	}
+
+	@media (max-width: 960px) {
+		.ide {
+			grid-template-columns: 1fr;
+		}
+
+		.ide__sidebar {
+			border-right: none;
+			border-bottom: 1px solid var(--border);
+		}
+
+		.span-2 {
+			grid-column: auto;
+		}
+	}
+
+	@media (max-width: 600px) {
+		.hero__cta {
+			flex-direction: column;
+			align-items: stretch;
+		}
+
+		.terminal__input {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+</style>
