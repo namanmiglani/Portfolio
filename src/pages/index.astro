@@ -8,86 +8,69 @@
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Naman Miglani | Computer Science Portfolio</title>
+		<title>Naman Miglani</title>
 		<meta
 			name="description"
-			content="Naman Miglani — Computer Science portfolio with projects, experience, and interactive demos."
+			content="Naman Miglani — CS student at UBC. Software engineer with experience in AI systems, enterprise Java, and full-stack applications."
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="page">
-			<header class="hero" id="top">
-				<div class="hero__copy">
-					<p class="eyebrow">Computer Science Portfolio</p>
-					<h1>Naman Miglani</h1>
-					<p class="subtitle">
-						Software engineer with experience in AI systems, enterprise Java, and full-stack
-						applications. Building reliable products with thoughtful design and measurable
-						impact.
-					</p>
-					<div class="hero__cta">
-						<a class="button primary" href="/resume.pdf" download>Download Resume</a>
-						<a class="button" href="#contact">Contact Me</a>
-					</div>
-					<div class="hero__links">
-						<a href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
-						<span aria-hidden="true">•</span>
-						<a
-							href="https://linkedin.com/in/naman-miglani"
-							target="_blank"
-							rel="noreferrer"
-						>LinkedIn</a
-						>
-						<span aria-hidden="true">•</span>
-						<a href="mailto:namanmiglani5@gmail.com">namanmiglani5@gmail.com</a>
-					</div>
-				</div>
-				<div class="hero__panel">
-					<div class="terminal" aria-label="Terminal navigation">
-						<div class="terminal__title">
-							<span class="dot red"></span>
-							<span class="dot yellow"></span>
-							<span class="dot green"></span>
-							<span>terminal</span>
-						</div>
-						<div class="terminal__body" id="terminal-output">
-							<p><span class="prompt">naman@portfolio</span>:~$ help</p>
-							<p class="muted">Available commands: cd ./about, cd ./experience, cd ./projects, cd ./contact, open resume.pdf</p>
-						</div>
-						<form class="terminal__input" id="terminal-form">
-							<label class="prompt" for="terminal-cmd">naman@portfolio:~$</label>
-							<input id="terminal-cmd" name="cmd" type="text" placeholder="cd ./projects" autocomplete="off" />
-						</form>
-						<div class="terminal__shortcuts">
-							<button type="button" data-cmd="cd ./about">cd ./about</button>
-							<button type="button" data-cmd="cd ./experience">cd ./experience</button>
-							<button type="button" data-cmd="cd ./projects">cd ./projects</button>
-							<button type="button" data-cmd="cd ./contact">cd ./contact</button>
-							<button type="button" data-cmd="open resume.pdf">open resume.pdf</button>
-						</div>
-					</div>
-				</div>
-			</header>
+		<!-- Canvas for mouse-tracking dot particles -->
+		<canvas id="dot-canvas"></canvas>
 
-			<section class="ide" aria-label="IDE inspired layout">
+		<!-- Hero Section -->
+		<section class="hero" id="home">
+			<div class="gradient-blob blob-1"></div>
+			<div class="gradient-blob blob-2"></div>
+			<div class="gradient-blob blob-3"></div>
+			<div class="gradient-blob blob-4"></div>
+
+			<div class="hero__content">
+				<h1 class="hero__name">naman miglani</h1>
+				<p class="hero__tagline">
+					cs student at ubc · software engineer in <span class="highlight-blue">AI</span>, <span class="highlight-green">backend</span>, &amp;&nbsp;<span class="highlight-red">full&#8209;stack</span>
+				</p>
+				<nav class="hero__nav">
+					<a href="#home">home</a>
+					<a href="#about">about</a>
+					<a href="#experience-section">experience</a>
+					<a href="#projects-section">projects</a>
+					<a href="#contact-section">contact</a>
+					<span class="nav-divider">|</span>
+					<a href="https://github.com/namanmiglani" target="_blank" rel="noreferrer" aria-label="GitHub">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+					</a>
+					<a href="https://linkedin.com/in/naman-miglani" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM3.56 20.45h3.55V9H3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+					</a>
+				</nav>
+			</div>
+		</section>
+
+		<!-- IDE Section -->
+		<div class="page-content">
+			<section class="ide" aria-label="Portfolio content" id="about">
 				<div class="ide__sidebar">
 					<div class="ide__title">EXPLORER</div>
 					<ul>
-						<li class="folder">src</li>
+						<li class="folder">📁 naman-portfolio</li>
 						<li class="file indent">
-							<button type="button" data-tab="about">About.md</button>
+							<button type="button" data-tab="about">📄 About.md</button>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="experience">Experience.md</button>
+							<button type="button" data-tab="experience">💼 Experience.md</button>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="projects">Projects.tsx</button>
+							<button type="button" data-tab="projects">🚀 Projects.tsx</button>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="about" data-target="contact">Contact.tsx</button>
+							<button type="button" data-tab="about" data-target="contact-section">✉️ Contact.tsx</button>
 						</li>
 						<li class="file">
-							<button type="button" data-tab="resume">public/resume.pdf</button>
+							<button type="button" data-tab="resume">📋 resume.pdf</button>
 						</li>
 					</ul>
 				</div>
@@ -98,66 +81,86 @@
 						<button class="tab" type="button" data-tab="projects">Projects.tsx</button>
 						<button class="tab" type="button" data-tab="resume">resume.pdf</button>
 					</div>
+
 					<div class="grid">
+
+						<!-- ABOUT TAB -->
 						<div class="tab-panel active" data-tab-panel="about">
-							<article class="card" id="about">
-								<h2>About</h2>
+							<article class="card" id="who-am-i">
+								<h2>who am i?</h2>
 								<p>
-									I’m a computer science student at UBC with a 4.33 GPA. I build full-stack
-									software with a focus on AI systems, enterprise reliability, and clean UI. I
-									care about performance, secure systems, and shipping measurable results.
+									second-year cs student at <a href="https://ubc.ca" target="_blank" rel="noreferrer">ubc</a> with a 4.33 GPA. i build software with a focus on AI systems, enterprise reliability, and clean interfaces. i care about performance, secure systems, and shipping work that has measurable impact.
+								</p>
+								<p>
+									previously a software engineer intern at the <a href="#" target="_blank" rel="noreferrer">BC Liquor Distribution Branch</a> and <a href="#" target="_blank" rel="noreferrer">Cynomatic Cyber Solutions</a>.
+								</p>
+								<p>
+									also into sports, mechanical keyboards, and building cool side projects. always down for a good chat — feel free to reach out.
 								</p>
 								<div class="pill-group">
 									<span>Java</span>
 									<span>Python</span>
-									<span>TypeScript</span>
-									<span>React</span>
-									<span>Spring Boot</span>
-									<span>AWS</span>
-								</div>
-							</article>
-
-							<article class="card" id="working">
-								<h2>Currently working on</h2>
-								<ul>
-									<li>MLB Scoreboard Chrome Extension — 350+ daily active users.</li>
-									<li>Jarvis — multimodal AI agent with real-time vision and voice.</li>
-								</ul>
-							</article>
-
-							<article class="card span-2" id="education">
-								<h2>Education</h2>
-								<h3>University of British Columbia</h3>
-								<p>B.Sc. Computer Science (GPA 4.33/4.33)</p>
-								<p class="muted">Vancouver, BC · Sep 2023 – Apr 2027</p>
-								<p class="muted">
-									Relevant: Data Structures and Algorithms, Object-Oriented Design, Computer
-									Systems, Machine Learning
-								</p>
-							</article>
-
-							<article class="card span-2" id="skills">
-								<h2>Technical Skills</h2>
-								<p class="muted">Languages, frameworks, tools, and libraries I use daily.</p>
-								<div class="pill-group">
-									<span>Java</span>
-									<span>Python</span>
-									<span>C/C++</span>
-									<span>SQL</span>
 									<span>TypeScript</span>
 									<span>React</span>
 									<span>Spring Boot</span>
 									<span>AWS</span>
 									<span>PostgreSQL</span>
-									<span>Scikit-learn</span>
-									<span>OpenCV</span>
-									<span>Hugging Face</span>
+									<span>Machine Learning</span>
 								</div>
 							</article>
 
-							<article class="card span-2" id="contact">
-								<h2>Contact</h2>
-								<p class="muted">Send a message and I’ll reply quickly.</p>
+							<article class="card" id="currently-working">
+								<h2>probably busy working on...</h2>
+								<ul>
+									<li>
+										<strong>MLB Scoreboard</strong> — Chrome extension with 350+ daily active users and 1.2k+ installs
+									</li>
+									<li>
+										<strong>Jarvis</strong> — multimodal AI agent with real-time vision, OCR, and voice
+									</li>
+								</ul>
+							</article>
+
+							<article class="card span-2" id="education">
+								<h2>education</h2>
+								<div class="experience-item">
+									<div class="exp-header">
+										<strong>university of british columbia</strong>
+										<span class="muted">sep 2023 – apr 2027</span>
+									</div>
+									<p>b.sc. computer science · gpa 4.33/4.33 · vancouver, bc</p>
+									<p class="muted">relevant coursework: data structures & algorithms, object-oriented design, computer systems, machine learning</p>
+								</div>
+							</article>
+
+							<article class="card span-2" id="skills">
+								<h2>technical skills</h2>
+								<p class="muted">languages, frameworks, tools, and libraries i use regularly.</p>
+								<div class="skills-grid">
+									<div>
+										<p class="skills-label">languages</p>
+										<div class="pill-group">
+											<span>Java</span><span>Python</span><span>C/C++</span><span>SQL</span><span>TypeScript</span>
+										</div>
+									</div>
+									<div>
+										<p class="skills-label">frameworks & tools</p>
+										<div class="pill-group">
+											<span>React</span><span>Spring Boot</span><span>AWS</span><span>PostgreSQL</span>
+										</div>
+									</div>
+									<div>
+										<p class="skills-label">ai / ml</p>
+										<div class="pill-group">
+											<span>Scikit-learn</span><span>OpenCV</span><span>Hugging Face</span><span>LangChain</span>
+										</div>
+									</div>
+								</div>
+							</article>
+
+							<article class="card span-2" id="contact-section">
+								<h2>contact me</h2>
+								<p class="muted">send a message and i'll reply quickly.</p>
 								<form
 									name="contact"
 									method="POST"
@@ -167,247 +170,283 @@
 								>
 									<input type="hidden" name="form-name" value="contact" />
 									<p class="hidden">
-										<label>
-											Don’t fill this out if you're human: <input name="bot-field" />
-										</label>
+										<label>Don't fill this out if you're human: <input name="bot-field" /></label>
 									</p>
 									<div class="form-row">
 										<label>
-											Name
+											name
 											<input type="text" name="name" required />
 										</label>
 										<label>
-											Email
+											email
 											<input type="email" name="email" required />
 										</label>
 									</div>
 									<label>
-										Company
+										company
 										<input type="text" name="company" />
 									</label>
 									<label>
-										Message
+										message
 										<textarea name="message" rows="4" required></textarea>
 									</label>
-									<button type="submit" class="button primary">Send Message</button>
+									<button type="submit" class="button primary">send message</button>
 								</form>
 							</article>
 						</div>
 
-						<div class="tab-panel" data-tab-panel="experience">
+						<!-- EXPERIENCE TAB -->
+						<div class="tab-panel" data-tab-panel="experience" id="experience-section">
 							<article class="card span-2">
-								<h2>Software Engineer Intern — BC Liquor Distribution Branch</h2>
-								<p class="muted">Jan 2025 – Aug 2025 · Vancouver, BC</p>
-								<ul>
-									<li>
-										Upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java 17/Spring Boot 3
-										for inventory and sales systems.
-									</li>
-									<li>
-										Built SAML 2.0 single sign-on across 10 apps, reducing daily authentication
-										friction by 90%.
-									</li>
-									<li>
-										Resolved production defects and improved CI/CD deployment cycles by 40%.
-									</li>
-								</ul>
-							</article>
+								<h2>work</h2>
+								<div class="experience-list">
+									<div class="experience-item">
+										<div class="exp-header">
+											<span><a href="#" class="exp-company">bc liquor distribution branch</a> &gt; software engineer intern</span>
+											<span class="muted">jan 2025 – aug 2025</span>
+										</div>
+										<p class="muted">vancouver, bc</p>
+										<div class="exp-details">
+											<ul>
+												<li>upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java 17/Spring Boot 3 for inventory and sales systems</li>
+												<li>built SAML 2.0 single sign-on across 10 apps, reducing daily authentication friction by 90%</li>
+												<li>resolved production defects and improved CI/CD deployment cycles by 40%</li>
+											</ul>
+										</div>
+									</div>
 
-							<article class="card span-2">
-								<h2>Teaching Assistant — CPSC 110</h2>
-								<p class="muted">Sep 2024 – Jan 2025 · UBC Vancouver, BC</p>
-								<ul>
-									<li>
-										Led lab sessions and office hours for 1500+ students, translating CS concepts
-										into solutions.
-									</li>
-									<li>
-										Conducted 100+ weekly code reviews, emphasizing TDD and documentation
-										practices.
-									</li>
-								</ul>
-							</article>
+									<div class="experience-item">
+										<div class="exp-header">
+											<span><a href="#" class="exp-company">cynomatic cyber solutions</a> &gt; software engineer intern</span>
+											<span class="muted">may 2024 – aug 2024</span>
+										</div>
+										<p class="muted">calgary, ab</p>
+										<div class="exp-details">
+											<ul>
+												<li>built an enterprise GenAI agent using LangChain and ChromaDB for 100+ internal documents</li>
+												<li>engineered a React interface that increased site traffic and inbound lead generation by 20%</li>
+												<li>automated marketing workflows in Python, increasing customer inquiries by 30%</li>
+											</ul>
+										</div>
+									</div>
 
-							<article class="card span-2">
-								<h2>Software Engineer Intern — Cynomatic Cyber Solutions</h2>
-								<p class="muted">May 2024 – Aug 2024 · Calgary, AB</p>
-								<ul>
-									<li>
-										Built an enterprise GenAI agent using LangChain and ChromaDB for 100+ internal
-										documents.
-									</li>
-									<li>
-										Engineered a React interface that increased site traffic and inbound lead
-										generation by 20%.
-									</li>
-									<li>
-										Automated marketing workflows in Python, increasing customer inquiries by 30%.
-									</li>
-								</ul>
-							</article>
-						</div>
-
-						<div class="tab-panel" data-tab-panel="projects">
-							<article class="card span-2">
-								<h2>MLB Scoreboard Chrome Extension</h2>
-								<p class="muted">May 2024 – Present · HTML, CSS, JS, Express, Node.js</p>
-								<ul>
-									<li>350+ daily active users and 1.2k+ total installs.</li>
-									<li>
-										AI recap endpoint using AWS Bedrock with caching, reducing response times by 40%.
-									</li>
-									<li>
-										Express REST API with PostgreSQL (Supabase) for real-time updates.
-									</li>
-								</ul>
-								<div class="project-media">
-									<div class="project-image">Project preview</div>
-									<a class="button" href="#" aria-disabled="true">View Demo</a>
-								</div>
-							</article>
-
-							<article class="card span-2">
-								<h2>Jarvis</h2>
-								<p class="muted">Jan 2026 · LangGraph, OpenCV, Whisper, PyQt5</p>
-								<ul>
-									<li>Multimodal AI agent with real-time vision, OCR, and voice.</li>
-									<li>Async Python backend with WebSockets for low-latency interactions.</li>
-									<li>60 FPS HUD rendering with PyQt5 and OpenCV.</li>
-								</ul>
-								<div class="project-media">
-									<div class="project-image">Project preview</div>
-									<a class="button" href="#" aria-disabled="true">View Demo</a>
-								</div>
-							</article>
-
-							<article class="card span-2">
-								<h2>Emotion Playlist Generator</h2>
-								<p class="muted">Jul 2025 – Aug 2025 · AWS Lambda, Rekognition</p>
-								<ul>
-									<li>Mood-based Spotify playlist generation.</li>
-									<li>Emotion recognition pipeline with AWS Rekognition and Lambda.</li>
-									<li>API Gateway integration for frontend communication.</li>
-								</ul>
-								<div class="project-media">
-									<div class="project-image">Project preview</div>
-									<a class="button" href="#" aria-disabled="true">View Demo</a>
+									<div class="experience-item">
+										<div class="exp-header">
+											<span><a href="#" class="exp-company">ubc</a> &gt; teaching assistant (cpsc 110)</span>
+											<span class="muted">sep 2024 – jan 2025</span>
+										</div>
+										<p class="muted">ubc vancouver, bc</p>
+										<div class="exp-details">
+											<ul>
+												<li>led lab sessions and office hours for 1500+ students, translating CS concepts into clear solutions</li>
+												<li>conducted 100+ weekly code reviews, emphasizing TDD and documentation practices</li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</article>
 						</div>
 
+						<!-- PROJECTS TAB -->
+						<div class="tab-panel" data-tab-panel="projects" id="projects-section">
+							<article class="card span-2">
+								<h2>probably busy working on...</h2>
+
+								<div class="project-entry">
+									<div class="exp-header">
+										<strong>MLB Scoreboard Chrome Extension</strong>
+										<span class="muted">may 2024 – present</span>
+									</div>
+									<p class="muted">HTML, CSS, JS, Express, Node.js</p>
+									<ul>
+										<li>350+ daily active users and 1.2k+ total installs</li>
+										<li>AI recap endpoint using AWS Bedrock with caching, reducing response times by 40%</li>
+										<li>Express REST API with PostgreSQL (Supabase) for real-time updates</li>
+									</ul>
+									<div class="project-links">
+										<a class="button small" href="#" aria-disabled="true">View Demo</a>
+										<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+									</div>
+								</div>
+
+								<div class="project-entry">
+									<div class="exp-header">
+										<strong>Jarvis</strong>
+										<span class="muted">jan 2026</span>
+									</div>
+									<p class="muted">LangGraph, OpenCV, Whisper, PyQt5</p>
+									<ul>
+										<li>multimodal AI agent with real-time vision, OCR, and voice</li>
+										<li>async Python backend with WebSockets for low-latency interactions</li>
+										<li>60 FPS HUD rendering with PyQt5 and OpenCV</li>
+									</ul>
+									<div class="project-links">
+										<a class="button small" href="#" aria-disabled="true">View Demo</a>
+										<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+									</div>
+								</div>
+
+								<div class="project-entry">
+									<div class="exp-header">
+										<strong>Emotion Playlist Generator</strong>
+										<span class="muted">jul 2025 – aug 2025</span>
+									</div>
+									<p class="muted">AWS Lambda, Rekognition, Spotify API</p>
+									<ul>
+										<li>mood-based Spotify playlist generation from facial emotion recognition</li>
+										<li>emotion recognition pipeline with AWS Rekognition and Lambda</li>
+										<li>API Gateway integration for frontend communication</li>
+									</ul>
+									<div class="project-links">
+										<a class="button small" href="#" aria-disabled="true">View Demo</a>
+										<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+									</div>
+								</div>
+							</article>
+						</div>
+
+						<!-- RESUME TAB -->
 						<div class="tab-panel" data-tab-panel="resume">
 							<article class="card span-2 resume-panel">
-								<h2>Resume</h2>
-								<p class="muted">Opening resume in a new tab…</p>
+								<h2>resume</h2>
+								<p class="muted">opening resume in a new tab…</p>
 								<div class="resume-actions">
-									<a class="button primary" href="/resume.pdf" target="_blank" rel="noreferrer">Open Resume</a>
-									<a class="button" href="/resume.pdf" download>Download Resume</a>
+									<a class="button primary" href="/resume.pdf" target="_blank" rel="noreferrer">open resume</a>
+									<a class="button" href="/resume.pdf" download>download resume</a>
 								</div>
 							</article>
 						</div>
+
 					</div>
 				</div>
 			</section>
 		</div>
 
 		<script>
-			const output = document.getElementById('terminal-output');
-			const form = document.getElementById('terminal-form');
-			const input = document.getElementById('terminal-cmd');
-			const shortcuts = document.querySelectorAll('[data-cmd]');
-			const commands = {
-				'cd ./about': 'about',
-				'cd ./experience': 'experience',
-				'cd ./projects': 'projects',
-				'cd ./contact': 'contact',
-				'open resume.pdf': 'resume'
-			};
-
-			const tabs = document.querySelectorAll('[data-tab]');
-			const panels = document.querySelectorAll('[data-tab-panel]');
+			/* ── Tab switching ───────────────────────────────── */
+			const tabs = document.querySelectorAll<HTMLButtonElement>('[data-tab]');
+			const panels = document.querySelectorAll<HTMLElement>('[data-tab-panel]');
 			let resumeOpened = false;
 
-			const setActiveTab = (tabKey) => {
-				tabs.forEach((tab) => {
-					tab.classList.toggle('active', tab.dataset.tab === tabKey);
-				});
-				panels.forEach((panel) => {
-					panel.classList.toggle('active', panel.dataset.tabPanel === tabKey);
-				});
+			const setActiveTab = (tabKey: string) => {
+				tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.tab === tabKey));
+				panels.forEach(panel => panel.classList.toggle('active', panel.dataset.tabPanel === tabKey));
 				if (tabKey === 'resume' && !resumeOpened) {
 					window.open('/resume.pdf', '_blank');
 					resumeOpened = true;
 				}
 			};
 
-			const writeLine = (text, cls = '') => {
-				const line = document.createElement('p');
-				if (cls) line.classList.add(cls);
-				line.textContent = text;
-				output.appendChild(line);
-				output.scrollTop = output.scrollHeight;
-			};
-
-			const runCommand = (cmd) => {
-				const trimmed = cmd.trim();
-				if (!trimmed) return;
-				writeLine(`naman@portfolio:~$ ${trimmed}`);
-				if (commands[trimmed]) {
-					setActiveTab(commands[trimmed]);
-					writeLine(`Switched to ${commands[trimmed]} tab`);
-				} else if (trimmed === 'help') {
-					writeLine('Available commands: cd ./about, cd ./experience, cd ./projects, cd ./contact, open resume.pdf');
-				} else {
-					writeLine('Command not found. Type help for options.', 'muted');
-				}
-			};
-
-			tabs.forEach((tab) =>
+			tabs.forEach(tab =>
 				tab.addEventListener('click', () => {
 					const tabKey = tab.dataset.tab || 'about';
 					setActiveTab(tabKey);
 					const targetId = tab.dataset.target;
 					if (targetId) {
 						const target = document.getElementById(targetId);
-						if (target) {
-							target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-						}
+						if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 					}
 				})
 			);
 
-			form.addEventListener('submit', (event) => {
-				event.preventDefault();
-				runCommand(input.value);
-				input.value = '';
+			setActiveTab('about');
+
+			/* ── Expandable experience details ───────────────── */
+			document.querySelectorAll('.experience-item').forEach(item => {
+				const details = item.querySelector('.exp-details');
+				if (!details) return;
+				(details as HTMLElement).style.display = 'none';
+				const btn = document.createElement('button');
+				btn.className = 'more-btn';
+				btn.textContent = 'more details ↓';
+				btn.addEventListener('click', () => {
+					const open = (details as HTMLElement).style.display !== 'none';
+					(details as HTMLElement).style.display = open ? 'none' : 'block';
+					btn.textContent = open ? 'more details ↓' : 'less details ↑';
+				});
+				item.appendChild(btn);
 			});
 
-			shortcuts.forEach((btn) =>
-				btn.addEventListener('click', () => {
-					runCommand(btn.dataset.cmd || '');
-				})
-			);
+			/* ── Mouse-tracking dot particles ────────────────── */
+			interface Dot {
+				x: number; y: number;
+				size: number;
+				color: string;
+				vx: number; vy: number;
+				life: number; maxLife: number;
+			}
 
-			setActiveTab('about');
+			const canvas = document.getElementById('dot-canvas') as HTMLCanvasElement;
+			const ctx = canvas.getContext('2d')!;
+			const COLORS = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
+			const dots: Dot[] = [];
+			let mouseX = -1000, mouseY = -1000;
+
+			function resize() {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			}
+			resize();
+			window.addEventListener('resize', resize);
+
+			window.addEventListener('mousemove', (e: MouseEvent) => {
+				mouseX = e.clientX;
+				mouseY = e.clientY;
+				// Only spawn dots while hovering in the hero section
+				const hero = document.querySelector('.hero') as HTMLElement;
+				if (!hero) return;
+				const rect = hero.getBoundingClientRect();
+				if (e.clientY < rect.bottom + 20) {
+					for (let i = 0; i < 2; i++) {
+						const size = 4 + Math.random() * 5;
+						dots.push({
+							x: e.clientX + (Math.random() - 0.5) * 20,
+							y: e.clientY + (Math.random() - 0.5) * 20,
+							size,
+							color: COLORS[Math.floor(Math.random() * COLORS.length)],
+							vx: (Math.random() - 0.5) * 1.2,
+							vy: (Math.random() - 0.5) * 1.2 - 0.5,
+							life: 0,
+							maxLife: 60 + Math.random() * 60,
+						});
+					}
+				}
+			});
+
+			function animateDots() {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				for (let i = dots.length - 1; i >= 0; i--) {
+					const d = dots[i];
+					d.x += d.vx;
+					d.y += d.vy;
+					d.life++;
+					const alpha = 1 - d.life / d.maxLife;
+					if (alpha <= 0) { dots.splice(i, 1); continue; }
+					ctx.globalAlpha = alpha;
+					ctx.fillStyle = d.color;
+					ctx.fillRect(d.x - d.size / 2, d.y - d.size / 2, d.size, d.size);
+				}
+				ctx.globalAlpha = 1;
+				requestAnimationFrame(animateDots);
+			}
+			animateDots();
 		</script>
 	</body>
 </html>
 
 <style>
 	:root {
-		color-scheme: light;
-		--bg: #f7f7fb;
+		--text: #1a1a1a;
+		--muted: #666;
+		--accent: #1a1a1a;
+		--accent-soft: rgba(26, 26, 26, 0.07);
+		--border: rgba(0, 0, 0, 0.08);
 		--surface: #ffffff;
-		--surface-alt: #f0f2f7;
-		--text: #141824;
-		--muted: #586174;
-		--accent: #2b6bf3;
-		--accent-soft: rgba(43, 107, 243, 0.12);
-		--border: rgba(20, 24, 36, 0.08);
-		--shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-		--radius-lg: 24px;
-		--radius-md: 16px;
-		--radius-sm: 12px;
+		--surface-alt: #f5f5f7;
+		--shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+		--radius-lg: 20px;
+		--radius-md: 14px;
+		--radius-sm: 10px;
 	}
 
 	* {
@@ -416,16 +455,20 @@
 		padding: 0;
 	}
 
+	html {
+		scroll-behavior: smooth;
+	}
+
 	body {
-		font-family: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter",
-			"Segoe UI", sans-serif;
-		background: radial-gradient(circle at top, #eef2ff 0%, #f7f7fb 55%, #ffffff 100%);
+		font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+		background: #ffffff;
 		color: var(--text);
-		line-height: 1.6;
+		line-height: 1.65;
+		font-size: 15px;
 	}
 
 	a {
-		color: var(--accent);
+		color: inherit;
 		text-decoration: none;
 	}
 
@@ -433,201 +476,189 @@
 		text-decoration: underline;
 	}
 
-	.page {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 48px 24px 80px;
+	/* ── Canvas overlay ──────────────────────────── */
+	#dot-canvas {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 10;
+	}
+
+	/* ── Hero ────────────────────────────────────── */
+	.hero {
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		min-height: 520px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		background: #ffffff;
+	}
+
+	/* Animated gradient blobs */
+	.gradient-blob {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(80px);
+		opacity: 0.55;
+		pointer-events: none;
+		animation: blobFloat 10s ease-in-out infinite alternate;
+	}
+
+	.blob-1 {
+		width: 480px;
+		height: 480px;
+		background: radial-gradient(circle, #ffd6e0 0%, transparent 70%);
+		top: -80px;
+		left: -100px;
+		animation-duration: 12s;
+	}
+
+	.blob-2 {
+		width: 360px;
+		height: 360px;
+		background: radial-gradient(circle, #d6f0ff 0%, transparent 70%);
+		top: 40px;
+		right: -60px;
+		animation-duration: 9s;
+		animation-delay: -3s;
+	}
+
+	.blob-3 {
+		width: 420px;
+		height: 420px;
+		background: radial-gradient(circle, #e8d6ff 0%, transparent 70%);
+		bottom: -60px;
+		right: 120px;
+		animation-duration: 11s;
+		animation-delay: -5s;
+	}
+
+	.blob-4 {
+		width: 320px;
+		height: 320px;
+		background: radial-gradient(circle, #d6ffe8 0%, transparent 70%);
+		bottom: -40px;
+		left: 180px;
+		animation-duration: 13s;
+		animation-delay: -2s;
+	}
+
+	@keyframes blobFloat {
+		0% { transform: translate(0, 0) scale(1); }
+		100% { transform: translate(30px, 20px) scale(1.07); }
+	}
+
+	.hero__content {
+		position: relative;
+		z-index: 2;
+		text-align: center;
 		display: flex;
 		flex-direction: column;
-		gap: 48px;
+		align-items: center;
+		gap: 14px;
 	}
 
-	.hero {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 32px;
-		align-items: start;
+	.hero__name {
+		font-size: clamp(2.8rem, 6vw, 4.4rem);
+		font-weight: 700;
+		letter-spacing: -0.03em;
+		color: var(--text);
+		line-height: 1.1;
 	}
 
-	.hero__copy h1 {
-		font-size: clamp(2.6rem, 4vw, 3.6rem);
-		margin-bottom: 12px;
-	}
-
-	.eyebrow {
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		font-size: 0.75rem;
+	.hero__tagline {
+		font-size: clamp(0.9rem, 1.8vw, 1.1rem);
 		color: var(--muted);
-		margin-bottom: 16px;
-	}
-
-	.subtitle {
-		font-size: 1.1rem;
-		color: var(--muted);
+		font-weight: 400;
 		max-width: 520px;
 	}
 
-	.hero__cta {
-		display: flex;
-		gap: 12px;
-		margin: 24px 0 16px;
-		flex-wrap: wrap;
-	}
+	.highlight-blue { color: #2563eb; font-family: 'Inter', sans-serif; }
+	.highlight-green { color: #16a34a; }
+	.highlight-red { color: #dc2626; }
 
-	.hero__links {
-		display: flex;
-		gap: 12px;
-		align-items: center;
-		color: var(--muted);
-		flex-wrap: wrap;
-	}
-
-	.button {
-		border: 1px solid var(--border);
-		background: var(--surface);
-		color: var(--text);
-		padding: 10px 18px;
-		border-radius: 999px;
-		font-weight: 600;
-		box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
-	}
-
-	.button.primary {
-		background: var(--accent);
-		color: #fff;
-		border-color: transparent;
-	}
-
-	.hero__panel {
-		display: flex;
-		flex-direction: column;
-		gap: 20px;
-	}
-
-	.terminal {
-		background: var(--surface);
-		border: 1px solid var(--border);
-		border-radius: var(--radius-lg);
-		box-shadow: var(--shadow);
-	}
-
-	.terminal__title {
+	.hero__nav {
 		display: flex;
 		align-items: center;
-		gap: 8px;
-		padding: 12px 16px;
-		border-bottom: 1px solid var(--border);
-		font-size: 0.85rem;
+		gap: 18px;
+		margin-top: 8px;
+		font-size: 0.88rem;
 		color: var(--muted);
 	}
 
-	.dot {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%;
-		display: inline-block;
-	}
-
-	.dot.red {
-		background: #ff5f56;
-	}
-
-	.dot.yellow {
-		background: #ffbd2e;
-	}
-
-	.dot.green {
-		background: #27c93f;
-	}
-
-	.terminal__body {
-		padding: 16px;
-		max-height: 220px;
-		overflow-y: auto;
-		font-family: "SF Mono", "Fira Code", monospace;
-		font-size: 0.85rem;
-	}
-
-	.prompt {
-		color: #3d7eff;
-		font-weight: 600;
-		margin-right: 6px;
-	}
-
-	.terminal__input {
+	.hero__nav a {
+		color: var(--muted);
+		transition: color 0.2s;
 		display: flex;
-		gap: 8px;
 		align-items: center;
-		padding: 12px 16px 16px;
-		border-top: 1px solid var(--border);
 	}
 
-	.terminal__input input {
-		flex: 1;
-		border: none;
-		background: transparent;
-		font-family: "SF Mono", "Fira Code", monospace;
-		font-size: 0.9rem;
+	.hero__nav a:hover {
 		color: var(--text);
-		outline: none;
+		text-decoration: none;
 	}
 
-	.terminal__shortcuts {
-		display: flex;
-		gap: 8px;
-		flex-wrap: wrap;
-		padding: 0 16px 16px;
+	.nav-divider {
+		color: #ccc;
 	}
 
-	.terminal__shortcuts button {
-		border: 1px solid var(--border);
-		background: var(--surface-alt);
-		border-radius: 999px;
-		padding: 6px 12px;
-		font-size: 0.75rem;
-		cursor: pointer;
+	/* ── Page content wrapper ────────────────────── */
+	.page-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 60px 24px 100px;
 	}
 
-
+	/* ── IDE ─────────────────────────────────────── */
 	.ide {
 		display: grid;
-		grid-template-columns: minmax(200px, 230px) 1fr;
-		gap: 0;
+		grid-template-columns: minmax(200px, 240px) 1fr;
 		background: var(--surface);
 		border: 1px solid var(--border);
 		border-radius: var(--radius-lg);
 		overflow: hidden;
 		box-shadow: var(--shadow);
+		min-height: 600px;
 	}
 
 	.ide__sidebar {
-		background: #f3f4f8;
-		padding: 20px;
+		background: #f5f5f7;
+		padding: 24px 20px;
 		border-right: 1px solid var(--border);
 	}
 
 	.ide__title {
-		font-size: 0.75rem;
+		font-size: 0.7rem;
 		letter-spacing: 0.15em;
 		color: var(--muted);
-		margin-bottom: 16px;
+		font-weight: 600;
+		margin-bottom: 18px;
+		text-transform: uppercase;
 	}
 
 	.ide__sidebar ul {
 		list-style: none;
-		font-size: 0.9rem;
+		font-size: 0.92rem;
 		color: var(--text);
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
 	}
 
 	.folder {
 		font-weight: 600;
-		margin-bottom: 8px;
+		margin-bottom: 6px;
+		font-size: 0.88rem;
 	}
 
 	.file {
 		color: var(--muted);
-		margin-bottom: 6px;
 	}
 
 	.file button {
@@ -635,19 +666,27 @@
 		background: none;
 		font: inherit;
 		color: inherit;
-		padding: 0;
+		padding: 4px 8px;
 		cursor: pointer;
 		text-align: left;
 		width: 100%;
+		border-radius: 6px;
+		transition: background 0.15s, color 0.15s;
+	}
+
+	.file button:hover {
+		background: rgba(0,0,0,0.05);
+		color: var(--text);
 	}
 
 	.file button.active {
 		color: var(--text);
 		font-weight: 600;
+		background: rgba(0,0,0,0.06);
 	}
 
 	.indent {
-		padding-left: 16px;
+		padding-left: 12px;
 	}
 
 	.ide__main {
@@ -657,54 +696,85 @@
 
 	.ide__tabs {
 		display: flex;
-		gap: 8px;
-		padding: 12px 16px;
-		background: var(--surface-alt);
+		gap: 4px;
+		padding: 10px 16px;
+		background: #f0f0f3;
 		border-bottom: 1px solid var(--border);
 		flex-wrap: wrap;
 	}
 
 	.tab {
-		padding: 6px 12px;
-		border-radius: 10px;
+		padding: 7px 16px;
+		border-radius: 8px;
 		background: transparent;
 		color: var(--muted);
-		font-size: 0.85rem;
+		font-size: 0.88rem;
 		border: none;
 		cursor: pointer;
+		font-family: inherit;
+		transition: background 0.15s, color 0.15s;
+	}
+
+	.tab:hover {
+		background: rgba(0,0,0,0.05);
+		color: var(--text);
 	}
 
 	.tab.active {
 		background: #fff;
 		color: var(--text);
-		box-shadow: 0 4px 10px rgba(15, 23, 42, 0.08);
+		font-weight: 500;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
 	}
 
 	.grid {
-		padding: 24px;
+		padding: 32px;
 		background: #fff;
+		flex: 1;
 	}
 
 	.tab-panel {
 		display: none;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 20px;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 22px;
 	}
 
 	.tab-panel.active {
 		display: grid;
 	}
 
+	/* ── Cards ───────────────────────────────────── */
 	.card {
 		background: var(--surface);
 		border: 1px solid var(--border);
 		border-radius: var(--radius-md);
-		padding: 20px;
-		box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+		padding: 28px;
 	}
 
 	.card h2 {
-		margin-bottom: 12px;
+		font-size: 1.15rem;
+		font-weight: 600;
+		margin-bottom: 16px;
+		color: var(--text);
+		letter-spacing: -0.01em;
+	}
+
+	.card p + p {
+		margin-top: 12px;
+	}
+
+	.card ul {
+		padding-left: 18px;
+		color: var(--muted);
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		margin-top: 8px;
+	}
+
+	.card ul li {
+		font-size: 0.93rem;
+		line-height: 1.5;
 	}
 
 	.card h3 {
@@ -717,41 +787,206 @@
 
 	.muted {
 		color: var(--muted);
+		font-size: 0.88rem;
 	}
 
+	/* ── Pill group ──────────────────────────────── */
 	.pill-group {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 8px;
-		margin-top: 12px;
+		gap: 7px;
+		margin-top: 14px;
 	}
 
 	.pill-group span {
 		background: var(--accent-soft);
-		color: var(--accent);
+		color: var(--text);
 		border-radius: 999px;
-		padding: 6px 12px;
-		font-size: 0.75rem;
-		font-weight: 600;
+		padding: 5px 13px;
+		font-size: 0.78rem;
+		font-weight: 500;
 	}
 
-	.timeline {
+	/* ── Skills grid ─────────────────────────────── */
+	.skills-grid {
 		display: flex;
 		flex-direction: column;
-		gap: 16px;
+		gap: 18px;
+		margin-top: 14px;
 	}
 
-	.timeline ul,
-	.projects ul {
-		padding-left: 18px;
+	.skills-label {
+		font-size: 0.78rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+		font-weight: 600;
+		margin-bottom: 6px;
+	}
+
+	/* ── Experience list ─────────────────────────── */
+	.experience-list {
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+		margin-top: 4px;
+	}
+
+	.experience-item {
+		padding-bottom: 24px;
+		border-bottom: 1px solid var(--border);
+	}
+
+	.experience-item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.exp-header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 12px;
+		margin-bottom: 4px;
+		flex-wrap: wrap;
+	}
+
+	.exp-company {
+		color: #2563eb;
+		font-weight: 500;
+	}
+
+	.exp-company:hover {
+		text-decoration: underline;
+	}
+
+	.exp-details {
+		margin-top: 10px;
+	}
+
+	.more-btn {
+		background: none;
+		border: none;
+		color: #2563eb;
+		font-size: 0.82rem;
+		cursor: pointer;
+		font-family: inherit;
+		padding: 6px 0 0;
+		display: inline-block;
+	}
+
+	.more-btn:hover {
+		text-decoration: underline;
+	}
+
+	/* ── Project entries ─────────────────────────── */
+	.project-entry {
+		padding-bottom: 28px;
+		border-bottom: 1px solid var(--border);
+		margin-top: 20px;
+	}
+
+	.project-entry:first-of-type {
+		margin-top: 0;
+	}
+
+	.project-entry:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	.project-links {
+		display: flex;
+		gap: 10px;
+		margin-top: 14px;
+		flex-wrap: wrap;
+	}
+
+	/* ── Buttons ─────────────────────────────────── */
+	.button {
+		display: inline-flex;
+		align-items: center;
+		border: 1px solid var(--border);
+		background: var(--surface);
+		color: var(--text);
+		padding: 9px 18px;
+		border-radius: 999px;
+		font-weight: 500;
+		font-family: inherit;
+		font-size: 0.88rem;
+		cursor: pointer;
+		transition: box-shadow 0.15s, background 0.15s;
+		text-decoration: none;
+	}
+
+	.button:hover {
+		text-decoration: none;
+		background: var(--surface-alt);
+		box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+	}
+
+	.button.primary {
+		background: var(--text);
+		color: #fff;
+		border-color: transparent;
+	}
+
+	.button.primary:hover {
+		background: #333;
+	}
+
+	.button.small {
+		padding: 6px 14px;
+		font-size: 0.8rem;
+	}
+
+	/* ── Contact form ────────────────────────────── */
+	.contact-form {
+		display: grid;
+		gap: 14px;
+		margin-top: 12px;
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 14px;
+	}
+
+	.contact-form label {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		font-size: 0.88rem;
 		color: var(--muted);
 	}
 
-	.projects {
-		display: grid;
-		gap: 16px;
+	.contact-form input,
+	.contact-form textarea {
+		width: 100%;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		padding: 10px 14px;
+		font-family: inherit;
+		font-size: 0.93rem;
+		color: var(--text);
+		background: var(--surface-alt);
+		transition: border-color 0.2s;
 	}
 
+	.contact-form input:focus,
+	.contact-form textarea:focus {
+		outline: none;
+		border-color: #555;
+	}
+
+	.contact-form button {
+		justify-self: start;
+	}
+
+	.hidden { display: none; }
+
+	/* ── Resume panel ────────────────────────────── */
 	.resume-panel {
 		display: grid;
 		gap: 16px;
@@ -761,55 +996,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 12px;
+		margin-top: 4px;
 	}
 
-	.project-media {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		margin-top: 16px;
-	}
-
-	.project-image {
-		height: 160px;
-		border-radius: 14px;
-		border: 1px dashed var(--border);
-		background: var(--surface-alt);
-		display: grid;
-		place-items: center;
-		color: var(--muted);
-		font-size: 0.85rem;
-	}
-
-	.contact-form {
-		display: grid;
-		gap: 12px;
-	}
-
-	.form-row {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 12px;
-	}
-
-	.contact-form input,
-	.contact-form textarea {
-		width: 100%;
-		border: 1px solid var(--border);
-		border-radius: 10px;
-		padding: 10px 12px;
-		font-family: inherit;
-	}
-
-	.contact-form button {
-		justify-self: start;
-	}
-
-	.hidden {
-		display: none;
-	}
-
-
+	/* ── Responsive ──────────────────────────────── */
 	@media (max-width: 960px) {
 		.ide {
 			grid-template-columns: 1fr;
@@ -823,17 +1013,21 @@
 		.span-2 {
 			grid-column: auto;
 		}
+
+		.grid {
+			padding: 20px;
+		}
 	}
 
 	@media (max-width: 600px) {
-		.hero__cta {
-			flex-direction: column;
-			align-items: stretch;
+		.hero__nav {
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 12px;
 		}
 
-		.terminal__input {
-			flex-direction: column;
-			align-items: flex-start;
+		.page-content {
+			padding: 40px 16px 80px;
 		}
 	}
 </style>
