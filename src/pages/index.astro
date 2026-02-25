@@ -30,15 +30,11 @@
 
 			<div class="hero__content">
 				<h1 class="hero__name">naman miglani</h1>
-				<p class="hero__tagline">
-					cs student at ubc · software engineer in <span class="highlight-blue">AI</span>, <span class="highlight-green">backend</span>, &amp;&nbsp;<span class="highlight-red">full&#8209;stack</span>
-				</p>
+				<p class="hero__tagline">cs student at ubc · software engineer in <span class="highlight-blue">AI</span>, <span class="highlight-green">backend</span>, &nbsp;<span class="highlight-red">full&#8209;stack</span></p>
 				<nav class="hero__nav">
-					<a href="#home">home</a>
 					<a href="#about">about</a>
 					<a href="#experience-section">experience</a>
 					<a href="#projects-section">projects</a>
-					<a href="#contact-section">contact</a>
 					<span class="nav-divider">|</span>
 					<a href="https://github.com/namanmiglani" target="_blank" rel="noreferrer" aria-label="GitHub">
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.2 11.38.6.1.82-.26.82-.58v-2.03c-3.34.72-4.04-1.6-4.04-1.6-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.48 1 .1-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02.005 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.9 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.69.83.57C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
@@ -50,7 +46,7 @@
 			</div>
 		</section>
 
-		<!-- IDE Section -->
+		<!-- IDE Section — Single Page -->
 		<div class="page-content">
 			<section class="ide" aria-label="Portfolio content" id="about">
 				<div class="ide__sidebar">
@@ -58,44 +54,37 @@
 					<ul>
 						<li class="folder">📁 naman-portfolio</li>
 						<li class="file indent">
-							<button type="button" data-tab="about">📄 About.md</button>
+							<a href="#who-am-i" class="sidebar-link" data-section="who-am-i">📄 About.md</a>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="experience">💼 Experience.md</button>
+							<a href="#education" class="sidebar-link" data-section="education">🎓 Education.md</a>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="projects">🚀 Projects.tsx</button>
+							<a href="#experience-section" class="sidebar-link" data-section="experience-section">💼 Experience.md</a>
 						</li>
 						<li class="file indent">
-							<button type="button" data-tab="about" data-target="contact-section">✉️ Contact.tsx</button>
+							<a href="#projects-section" class="sidebar-link" data-section="projects-section">🚀 Projects.tsx</a>
 						</li>
-						<li class="file">
-							<button type="button" data-tab="resume">📋 resume.pdf</button>
+						<li class="file indent">
+							<a href="#hobbies-section" class="sidebar-link" data-section="hobbies-section">🎮 Hobbies.md</a>
 						</li>
 					</ul>
 				</div>
 				<div class="ide__main">
-					<div class="ide__tabs">
-						<button class="tab active" type="button" data-tab="about">About.md</button>
-						<button class="tab" type="button" data-tab="experience">Experience.md</button>
-						<button class="tab" type="button" data-tab="projects">Projects.tsx</button>
-						<button class="tab" type="button" data-tab="resume">resume.pdf</button>
-					</div>
+					<div class="ide__scroll-area">
 
-					<div class="grid">
-
-						<!-- ABOUT TAB -->
-						<div class="tab-panel active" data-tab-panel="about">
-							<article class="card" id="who-am-i">
+						<!-- WHO AM I + PHOTO -->
+						<div class="section-row" id="who-am-i">
+							<article class="card reveal">
 								<h2>who am i?</h2>
 								<p>
 									second-year cs student at <a href="https://ubc.ca" target="_blank" rel="noreferrer">ubc</a> with a 4.33 GPA. i build software with a focus on AI systems, enterprise reliability, and clean interfaces. i care about performance, secure systems, and shipping work that has measurable impact.
 								</p>
 								<p>
-									previously a software engineer intern at the <a href="#" target="_blank" rel="noreferrer">BC Liquor Distribution Branch</a> and <a href="#" target="_blank" rel="noreferrer">Cynomatic Cyber Solutions</a>.
+									previously a software engineer intern at the <a href="#experience-section" class="inline-link">BC Liquor Distribution Branch</a> and <a href="#experience-section" class="inline-link">Cynomatic Cyber Solutions</a>.
 								</p>
 								<p>
-									also into sports, mechanical keyboards, and building cool side projects. always down for a good chat — feel free to reach out.
+									also into <a href="#hobbies-section" class="inline-link highlight-green">sports</a>, <a href="#hobbies-section" class="inline-link highlight-red">mechanical keyboards</a>, and building cool <a href="#projects-section" class="inline-link highlight-blue">side projects</a>. always down for a good chat — feel free to <a href="#contact-section" class="inline-link">reach out</a>.
 								</p>
 								<div class="pill-group">
 									<span>Java</span>
@@ -108,266 +97,236 @@
 									<span>Machine Learning</span>
 								</div>
 							</article>
-
-							<article class="card" id="currently-working">
-								<h2>probably busy working on...</h2>
-								<ul>
-									<li>
-										<strong>MLB Scoreboard</strong> — Chrome extension with 350+ daily active users and 1.2k+ installs
-									</li>
-									<li>
-										<strong>Jarvis</strong> — multimodal AI agent with real-time vision, OCR, and voice
-									</li>
-								</ul>
+							<article class="card photo-card reveal">
+								<div class="photo-placeholder">
+									<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+									<p class="muted">your photo here</p>
+								</div>
 							</article>
+						</div>
 
-							<article class="card span-2" id="education">
-								<h2>education</h2>
+						<!-- EDUCATION -->
+						<article class="card full-width reveal" id="education">
+							<h2>education</h2>
+							<div class="experience-item">
+								<div class="exp-header">
+									<strong>university of british columbia</strong>
+									<span class="muted">sep 2023 – apr 2027</span>
+								</div>
+								<p>b.sc. computer science · gpa 4.33/4.33 · vancouver, bc</p>
+								<p class="muted">relevant coursework: data structures & algorithms, object-oriented design, computer systems, machine learning</p>
+							</div>
+						</article>
+
+						<!-- EXPERIENCE -->
+						<article class="card full-width reveal" id="experience-section">
+							<h2>work</h2>
+							<div class="experience-list">
 								<div class="experience-item">
 									<div class="exp-header">
-										<strong>university of british columbia</strong>
-										<span class="muted">sep 2023 – apr 2027</span>
+										<span><a href="#" class="exp-company">bc liquor distribution branch</a> &gt; software engineer intern</span>
+										<span class="muted">jan 2025 – aug 2025</span>
 									</div>
-									<p>b.sc. computer science · gpa 4.33/4.33 · vancouver, bc</p>
-									<p class="muted">relevant coursework: data structures & algorithms, object-oriented design, computer systems, machine learning</p>
-								</div>
-							</article>
-
-							<article class="card span-2" id="skills">
-								<h2>technical skills</h2>
-								<p class="muted">languages, frameworks, tools, and libraries i use regularly.</p>
-								<div class="skills-grid">
-									<div>
-										<p class="skills-label">languages</p>
-										<div class="pill-group">
-											<span>Java</span><span>Python</span><span>C/C++</span><span>SQL</span><span>TypeScript</span>
-										</div>
-									</div>
-									<div>
-										<p class="skills-label">frameworks & tools</p>
-										<div class="pill-group">
-											<span>React</span><span>Spring Boot</span><span>AWS</span><span>PostgreSQL</span>
-										</div>
-									</div>
-									<div>
-										<p class="skills-label">ai / ml</p>
-										<div class="pill-group">
-											<span>Scikit-learn</span><span>OpenCV</span><span>Hugging Face</span><span>LangChain</span>
-										</div>
+									<p class="muted">vancouver, bc</p>
+									<p class="exp-summary">upgraded enterprise Java/Spring Boot apps, built SAML 2.0 SSO across 10 apps, and improved CI/CD deployment cycles by 40%.</p>
+									<div class="exp-details">
+										<ul>
+											<li>upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java 17/Spring Boot 3 for inventory and sales systems</li>
+											<li>built SAML 2.0 single sign-on across 10 apps, reducing daily authentication friction by 90%</li>
+											<li>resolved production defects and improved CI/CD deployment cycles by 40%</li>
+										</ul>
 									</div>
 								</div>
-							</article>
 
-							<article class="card span-2" id="contact-section">
-								<h2>contact me</h2>
-								<p class="muted">send a message and i'll reply quickly.</p>
-								<form
-									name="contact"
-									method="POST"
-									data-netlify="true"
-									netlify-honeypot="bot-field"
-									class="contact-form"
-								>
-									<input type="hidden" name="form-name" value="contact" />
-									<p class="hidden">
-										<label>Don't fill this out if you're human: <input name="bot-field" /></label>
-									</p>
-									<div class="form-row">
-										<label>
-											name
-											<input type="text" name="name" required />
-										</label>
-										<label>
-											email
-											<input type="email" name="email" required />
-										</label>
-									</div>
-									<label>
-										company
-										<input type="text" name="company" />
-									</label>
-									<label>
-										message
-										<textarea name="message" rows="4" required></textarea>
-									</label>
-									<button type="submit" class="button primary">send message</button>
-								</form>
-							</article>
-						</div>
-
-						<!-- EXPERIENCE TAB -->
-						<div class="tab-panel" data-tab-panel="experience" id="experience-section">
-							<article class="card span-2">
-								<h2>work</h2>
-								<div class="experience-list">
-									<div class="experience-item">
-										<div class="exp-header">
-											<span><a href="#" class="exp-company">bc liquor distribution branch</a> &gt; software engineer intern</span>
-											<span class="muted">jan 2025 – aug 2025</span>
-										</div>
-										<p class="muted">vancouver, bc</p>
-										<div class="exp-details">
-											<ul>
-												<li>upgraded 3 enterprise apps from Java 8/Spring Boot 2 to Java 17/Spring Boot 3 for inventory and sales systems</li>
-												<li>built SAML 2.0 single sign-on across 10 apps, reducing daily authentication friction by 90%</li>
-												<li>resolved production defects and improved CI/CD deployment cycles by 40%</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="experience-item">
-										<div class="exp-header">
-											<span><a href="#" class="exp-company">cynomatic cyber solutions</a> &gt; software engineer intern</span>
-											<span class="muted">may 2024 – aug 2024</span>
-										</div>
-										<p class="muted">calgary, ab</p>
-										<div class="exp-details">
-											<ul>
-												<li>built an enterprise GenAI agent using LangChain and ChromaDB for 100+ internal documents</li>
-												<li>engineered a React interface that increased site traffic and inbound lead generation by 20%</li>
-												<li>automated marketing workflows in Python, increasing customer inquiries by 30%</li>
-											</ul>
-										</div>
-									</div>
-
-									<div class="experience-item">
-										<div class="exp-header">
-											<span><a href="#" class="exp-company">ubc</a> &gt; teaching assistant (cpsc 110)</span>
-											<span class="muted">sep 2024 – jan 2025</span>
-										</div>
-										<p class="muted">ubc vancouver, bc</p>
-										<div class="exp-details">
-											<ul>
-												<li>led lab sessions and office hours for 1500+ students, translating CS concepts into clear solutions</li>
-												<li>conducted 100+ weekly code reviews, emphasizing TDD and documentation practices</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</article>
-						</div>
-
-						<!-- PROJECTS TAB -->
-						<div class="tab-panel" data-tab-panel="projects" id="projects-section">
-							<article class="card span-2">
-								<h2>probably busy working on...</h2>
-
-								<div class="project-entry">
+								<div class="experience-item">
 									<div class="exp-header">
-										<strong>MLB Scoreboard Chrome Extension</strong>
-										<span class="muted">may 2024 – present</span>
+										<span><a href="#" class="exp-company">cynomatic cyber solutions</a> &gt; software engineer intern</span>
+										<span class="muted">may 2024 – aug 2024</span>
 									</div>
-									<p class="muted">HTML, CSS, JS, Express, Node.js</p>
+									<p class="muted">calgary, ab</p>
+									<p class="exp-summary">built an enterprise GenAI agent using LangChain, engineered a React interface that increased site traffic by 20%.</p>
+									<div class="exp-details">
+										<ul>
+											<li>built an enterprise GenAI agent using LangChain and ChromaDB for 100+ internal documents</li>
+											<li>engineered a React interface that increased site traffic and inbound lead generation by 20%</li>
+											<li>automated marketing workflows in Python, increasing customer inquiries by 30%</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="experience-item">
+									<div class="exp-header">
+										<span><a href="#" class="exp-company">ubc</a> &gt; teaching assistant (cpsc 110)</span>
+										<span class="muted">sep 2024 – jan 2025</span>
+									</div>
+									<p class="muted">ubc vancouver, bc</p>
+									<p class="exp-summary">led lab sessions and office hours for 1500+ students, conducted 100+ weekly code reviews.</p>
+									<div class="exp-details">
+										<ul>
+											<li>led lab sessions and office hours for 1500+ students, translating CS concepts into clear solutions</li>
+											<li>conducted 100+ weekly code reviews, emphasizing TDD and documentation practices</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<!-- PROJECTS -->
+						<article class="card full-width reveal" id="projects-section">
+							<h2>probably busy working on...</h2>
+
+							<div class="project-entry">
+								<div class="exp-header">
+									<strong>MLB Scoreboard Chrome Extension</strong>
+									<span class="muted">may 2024 – present</span>
+								</div>
+								<p class="exp-summary">chrome extension with 350+ daily active users and 1.2k+ installs for live MLB scores and AI-powered game recaps.</p>
+								<div class="pill-group pill-group--tech">
+									<span>HTML</span><span>CSS</span><span>JS</span><span>Express</span><span>Node.js</span><span>PostgreSQL</span><span>AWS Bedrock</span>
+								</div>
+								<div class="exp-details">
 									<ul>
 										<li>350+ daily active users and 1.2k+ total installs</li>
 										<li>AI recap endpoint using AWS Bedrock with caching, reducing response times by 40%</li>
 										<li>Express REST API with PostgreSQL (Supabase) for real-time updates</li>
 									</ul>
-									<div class="project-links">
-										<a class="button small" href="#" aria-disabled="true">View Demo</a>
-										<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
-									</div>
 								</div>
+								<div class="project-links">
+									<a class="button small" href="#" aria-disabled="true">View Demo</a>
+									<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+								</div>
+							</div>
 
-								<div class="project-entry">
-									<div class="exp-header">
-										<strong>Jarvis</strong>
-										<span class="muted">jan 2026</span>
-									</div>
-									<p class="muted">LangGraph, OpenCV, Whisper, PyQt5</p>
+							<div class="project-entry">
+								<div class="exp-header">
+									<strong>Jarvis</strong>
+									<span class="muted">jan 2026</span>
+								</div>
+								<p class="exp-summary">multimodal AI agent with real-time vision, OCR, voice, and an async Python backend for low-latency interactions.</p>
+								<div class="pill-group pill-group--tech">
+									<span>LangGraph</span><span>OpenCV</span><span>Whisper</span><span>PyQt5</span><span>Python</span><span>WebSockets</span>
+								</div>
+								<div class="exp-details">
 									<ul>
 										<li>multimodal AI agent with real-time vision, OCR, and voice</li>
 										<li>async Python backend with WebSockets for low-latency interactions</li>
 										<li>60 FPS HUD rendering with PyQt5 and OpenCV</li>
 									</ul>
-									<div class="project-links">
-										<a class="button small" href="#" aria-disabled="true">View Demo</a>
-										<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
-									</div>
 								</div>
+								<div class="project-links">
+									<a class="button small" href="#" aria-disabled="true">View Demo</a>
+									<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+								</div>
+							</div>
 
-								<div class="project-entry">
-									<div class="exp-header">
-										<strong>Emotion Playlist Generator</strong>
-										<span class="muted">jul 2025 – aug 2025</span>
-									</div>
-									<p class="muted">AWS Lambda, Rekognition, Spotify API</p>
+							<div class="project-entry">
+								<div class="exp-header">
+									<strong>Emotion Playlist Generator</strong>
+									<span class="muted">jul 2025 – aug 2025</span>
+								</div>
+								<p class="exp-summary">mood-based Spotify playlist generation from real-time facial emotion recognition via AWS services.</p>
+								<div class="pill-group pill-group--tech">
+									<span>AWS Lambda</span><span>Rekognition</span><span>Spotify API</span><span>API Gateway</span><span>Python</span>
+								</div>
+								<div class="exp-details">
 									<ul>
 										<li>mood-based Spotify playlist generation from facial emotion recognition</li>
 										<li>emotion recognition pipeline with AWS Rekognition and Lambda</li>
 										<li>API Gateway integration for frontend communication</li>
 									</ul>
-									<div class="project-links">
-										<a class="button small" href="#" aria-disabled="true">View Demo</a>
-										<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+								</div>
+								<div class="project-links">
+									<a class="button small" href="#" aria-disabled="true">View Demo</a>
+									<a class="button small" href="https://github.com/namanmiglani" target="_blank" rel="noreferrer">GitHub</a>
+								</div>
+							</div>
+						</article>
+
+						<!-- HOBBIES -->
+						<article class="card full-width reveal" id="hobbies-section">
+							<h2>hobbies</h2>
+							<div class="hobbies-grid">
+								<div class="hobby-item">
+									<span class="hobby-icon">⌨️</span>
+									<div>
+										<strong>mechanical keyboards</strong>
+										<p class="muted">currently daily-driving a HHKB Professional Hybrid Type-S with topre switches. also own a Realforce R3S picked up in Japan and a few custom builds.</p>
 									</div>
 								</div>
-							</article>
-						</div>
-
-						<!-- RESUME TAB -->
-						<div class="tab-panel" data-tab-panel="resume">
-							<article class="card span-2 resume-panel">
-								<h2>resume</h2>
-								<p class="muted">opening resume in a new tab…</p>
-								<div class="resume-actions">
-									<a class="button primary" href="/resume.pdf" target="_blank" rel="noreferrer">open resume</a>
-									<a class="button" href="/resume.pdf" download>download resume</a>
+								<div class="hobby-item">
+									<span class="hobby-icon">⚽</span>
+									<div>
+										<strong>sports</strong>
+										<p class="muted">big into basketball, soccer, and anything competitive. always up for a pickup game or watching live matches.</p>
+									</div>
 								</div>
-							</article>
-						</div>
+								<div class="hobby-item">
+									<span class="hobby-icon">🛠️</span>
+									<div>
+										<strong>side projects</strong>
+										<p class="muted">love building things that solve real problems — from chrome extensions to AI agents. the best projects come from scratching your own itch.</p>
+									</div>
+								</div>
+							</div>
+						</article>
 
 					</div>
 				</div>
 			</section>
+
+			<!-- Contact message outside IDE -->
+			<p class="contact-outside">feel free to contact me at <a href="mailto:namanmiglani5@gmail.com">namanmiglani5@gmail.com</a></p>
 		</div>
 
 		<script>
-			/* ── Tab switching ───────────────────────────────── */
-			const tabs = document.querySelectorAll<HTMLButtonElement>('[data-tab]');
-			const panels = document.querySelectorAll<HTMLElement>('[data-tab-panel]');
-			let resumeOpened = false;
+			/* ── Sidebar highlight on scroll ─────────────────── */
+			const sidebarLinks = document.querySelectorAll<HTMLAnchorElement>('.sidebar-link');
+			const sections = document.querySelectorAll<HTMLElement>('[id]');
 
-			const setActiveTab = (tabKey: string) => {
-				tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.tab === tabKey));
-				panels.forEach(panel => panel.classList.toggle('active', panel.dataset.tabPanel === tabKey));
-				if (tabKey === 'resume' && !resumeOpened) {
-					window.open('/resume.pdf', '_blank');
-					resumeOpened = true;
-				}
-			};
-
-			tabs.forEach(tab =>
-				tab.addEventListener('click', () => {
-					const tabKey = tab.dataset.tab || 'about';
-					setActiveTab(tabKey);
-					const targetId = tab.dataset.target;
-					if (targetId) {
-						const target = document.getElementById(targetId);
-						if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+			const observerOpts = { rootMargin: '-20% 0px -60% 0px' };
+			const sectionObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						const id = entry.target.id;
+						sidebarLinks.forEach(link => {
+							link.classList.toggle('active', link.dataset.section === id);
+						});
 					}
-				})
-			);
+				});
+			}, observerOpts);
 
-			setActiveTab('about');
+			document.querySelectorAll('.ide__scroll-area [id]').forEach(el => sectionObserver.observe(el));
 
-			/* ── Expandable experience details ───────────────── */
-			document.querySelectorAll('.experience-item').forEach(item => {
-				const details = item.querySelector('.exp-details');
+			/* ── Expandable details (experience + projects) ──── */
+			document.querySelectorAll('.experience-item, .project-entry').forEach(item => {
+				const details = item.querySelector('.exp-details') as HTMLElement | null;
 				if (!details) return;
-				(details as HTMLElement).style.display = 'none';
+				details.style.display = 'none';
 				const btn = document.createElement('button');
 				btn.className = 'more-btn';
 				btn.textContent = 'more details ↓';
 				btn.addEventListener('click', () => {
-					const open = (details as HTMLElement).style.display !== 'none';
-					(details as HTMLElement).style.display = open ? 'none' : 'block';
+					const open = details.style.display !== 'none';
+					details.style.display = open ? 'none' : 'block';
 					btn.textContent = open ? 'more details ↓' : 'less details ↑';
 				});
-				item.appendChild(btn);
+				// Insert button after the details
+				details.parentNode!.insertBefore(btn, details.nextSibling);
 			});
 
-			/* ── Mouse-tracking dot particles ────────────────── */
+			/* ── Scroll reveal animation ────────────────────── */
+			const revealObserver = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.classList.add('revealed');
+						revealObserver.unobserve(entry.target);
+					}
+				});
+			}, { threshold: 0.08 });
+
+			document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+			/* ── Mouse-tracking dot particles (GLOBAL) ────── */
 			interface Dot {
 				x: number; y: number;
 				size: number;
@@ -380,7 +339,6 @@
 			const ctx = canvas.getContext('2d')!;
 			const COLORS = ['#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6', '#1abc9c'];
 			const dots: Dot[] = [];
-			let mouseX = -1000, mouseY = -1000;
 
 			function resize() {
 				canvas.width = window.innerWidth;
@@ -390,26 +348,18 @@
 			window.addEventListener('resize', resize);
 
 			window.addEventListener('mousemove', (e: MouseEvent) => {
-				mouseX = e.clientX;
-				mouseY = e.clientY;
-				// Only spawn dots while hovering in the hero section
-				const hero = document.querySelector('.hero') as HTMLElement;
-				if (!hero) return;
-				const rect = hero.getBoundingClientRect();
-				if (e.clientY < rect.bottom + 20) {
-					for (let i = 0; i < 2; i++) {
-						const size = 4 + Math.random() * 5;
-						dots.push({
-							x: e.clientX + (Math.random() - 0.5) * 20,
-							y: e.clientY + (Math.random() - 0.5) * 20,
-							size,
-							color: COLORS[Math.floor(Math.random() * COLORS.length)],
-							vx: (Math.random() - 0.5) * 1.2,
-							vy: (Math.random() - 0.5) * 1.2 - 0.5,
-							life: 0,
-							maxLife: 60 + Math.random() * 60,
-						});
-					}
+				for (let i = 0; i < 2; i++) {
+					const size = 4 + Math.random() * 5;
+					dots.push({
+						x: e.clientX + (Math.random() - 0.5) * 20,
+						y: e.clientY + (Math.random() - 0.5) * 20,
+						size,
+						color: COLORS[Math.floor(Math.random() * COLORS.length)],
+						vx: (Math.random() - 0.5) * 1.2,
+						vy: (Math.random() - 0.5) * 1.2 - 0.5,
+						life: 0,
+						maxLife: 60 + Math.random() * 60,
+					});
 				}
 			});
 
@@ -573,13 +523,13 @@
 	}
 
 	.hero__tagline {
-		font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+		font-size: clamp(0.9rem, 1.8vw, 1.15rem);
 		color: var(--muted);
 		font-weight: 400;
-		max-width: 520px;
+		white-space: nowrap;
 	}
 
-	.highlight-blue { color: #2563eb; font-family: 'Inter', sans-serif; }
+	.highlight-blue { color: #2563eb; }
 	.highlight-green { color: #16a34a; }
 	.highlight-red { color: #dc2626; }
 
@@ -610,7 +560,7 @@
 
 	/* ── Page content wrapper ────────────────────── */
 	.page-content {
-		max-width: 1200px;
+		max-width: 1440px;
 		margin: 0 auto;
 		padding: 60px 24px 100px;
 	}
@@ -631,6 +581,11 @@
 		background: #f5f5f7;
 		padding: 24px 20px;
 		border-right: 1px solid var(--border);
+		position: sticky;
+		top: 0;
+		align-self: start;
+		max-height: 100vh;
+		overflow-y: auto;
 	}
 
 	.ide__title {
@@ -655,34 +610,41 @@
 		font-weight: 600;
 		margin-bottom: 6px;
 		font-size: 0.88rem;
+		color: #999;
 	}
 
 	.file {
-		color: var(--muted);
+		color: #aaa;
 	}
 
-	.file button {
-		border: none;
-		background: none;
-		font: inherit;
-		color: inherit;
+	.sidebar-link {
+		display: block;
 		padding: 4px 8px;
-		cursor: pointer;
-		text-align: left;
-		width: 100%;
 		border-radius: 6px;
-		transition: background 0.15s, color 0.15s;
+		transition: background 0.15s, color 0.15s, opacity 0.15s;
+		color: #999;
+		text-decoration: none;
+		opacity: 0.75;
 	}
 
-	.file button:hover {
-		background: rgba(0,0,0,0.05);
-		color: var(--text);
+	.sidebar-link:hover {
+		background: rgba(0,0,0,0.04);
+		color: #666;
+		opacity: 1;
+		text-decoration: none;
 	}
 
-	.file button.active {
-		color: var(--text);
+	.sidebar-link.active {
+		color: #555;
 		font-weight: 600;
-		background: rgba(0,0,0,0.06);
+		background: rgba(0,0,0,0.05);
+		opacity: 1;
+	}
+
+	/* When user is dragging/selecting, make all sidebar links visible */
+	.ide__sidebar:active .sidebar-link,
+	.ide__sidebar:focus-within .sidebar-link {
+		opacity: 1;
 	}
 
 	.indent {
@@ -694,53 +656,22 @@
 		flex-direction: column;
 	}
 
-	.ide__tabs {
-		display: flex;
-		gap: 4px;
-		padding: 10px 16px;
-		background: #f0f0f3;
-		border-bottom: 1px solid var(--border);
-		flex-wrap: wrap;
-	}
 
-	.tab {
-		padding: 7px 16px;
-		border-radius: 8px;
-		background: transparent;
-		color: var(--muted);
-		font-size: 0.88rem;
-		border: none;
-		cursor: pointer;
-		font-family: inherit;
-		transition: background 0.15s, color 0.15s;
-	}
 
-	.tab:hover {
-		background: rgba(0,0,0,0.05);
-		color: var(--text);
-	}
-
-	.tab.active {
-		background: #fff;
-		color: var(--text);
-		font-weight: 500;
-		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
-	}
-
-	.grid {
+	.ide__scroll-area {
 		padding: 32px;
 		background: #fff;
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
 	}
 
-	.tab-panel {
-		display: none;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-		gap: 22px;
-	}
-
-	.tab-panel.active {
+	/* ── Section row (side by side) ──────────────── */
+	.section-row {
 		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
 	}
 
 	/* ── Cards ───────────────────────────────────── */
@@ -749,6 +680,16 @@
 		border: 1px solid var(--border);
 		border-radius: var(--radius-md);
 		padding: 28px;
+		transition: box-shadow 0.25s ease, transform 0.25s ease;
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+		transform: translateY(-2px);
+	}
+
+	.full-width {
+		width: 100%;
 	}
 
 	.card h2 {
@@ -781,13 +722,45 @@
 		margin: 10px 0 4px;
 	}
 
-	.span-2 {
-		grid-column: span 2;
-	}
-
 	.muted {
 		color: var(--muted);
 		font-size: 0.88rem;
+	}
+
+	/* ── Inline colored links (ryanz style) ───────── */
+	.inline-link {
+		text-decoration: underline;
+		text-decoration-style: dotted;
+		text-underline-offset: 3px;
+		transition: color 0.2s;
+	}
+
+	.inline-link:hover {
+		text-decoration-style: solid;
+	}
+
+	.inline-link.highlight-blue { color: #2563eb; }
+	.inline-link.highlight-green { color: #16a34a; }
+	.inline-link.highlight-red { color: #dc2626; }
+
+	/* ── Photo card ──────────────────────────────── */
+	.photo-card {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.photo-placeholder {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		padding: 40px;
+		border: 2px dashed var(--border);
+		border-radius: var(--radius-md);
+		color: var(--muted);
+		width: 100%;
+		text-align: center;
 	}
 
 	/* ── Pill group ──────────────────────────────── */
@@ -807,21 +780,15 @@
 		font-weight: 500;
 	}
 
-	/* ── Skills grid ─────────────────────────────── */
-	.skills-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 18px;
-		margin-top: 14px;
+	.pill-group--tech {
+		margin-top: 10px;
 	}
 
-	.skills-label {
-		font-size: 0.78rem;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		color: var(--muted);
-		font-weight: 600;
-		margin-bottom: 6px;
+	.pill-group--tech span {
+		background: rgba(37, 99, 235, 0.08);
+		color: #2563eb;
+		font-size: 0.72rem;
+		padding: 4px 11px;
 	}
 
 	/* ── Experience list ─────────────────────────── */
@@ -858,6 +825,13 @@
 
 	.exp-company:hover {
 		text-decoration: underline;
+	}
+
+	.exp-summary {
+		font-size: 0.9rem;
+		color: var(--muted);
+		margin-top: 6px;
+		line-height: 1.55;
 	}
 
 	.exp-details {
@@ -902,6 +876,41 @@
 		flex-wrap: wrap;
 	}
 
+	/* ── Hobbies grid ────────────────────────────── */
+	.hobbies-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 20px;
+		margin-top: 8px;
+	}
+
+	.hobby-item {
+		display: flex;
+		gap: 14px;
+		align-items: flex-start;
+		padding: 18px;
+		border: 1px solid var(--border);
+		border-radius: var(--radius-sm);
+		transition: box-shadow 0.2s, transform 0.2s;
+	}
+
+	.hobby-item:hover {
+		box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+		transform: translateY(-1px);
+	}
+
+	.hobby-icon {
+		font-size: 1.6rem;
+		flex-shrink: 0;
+		margin-top: 2px;
+	}
+
+	.hobby-item strong {
+		display: block;
+		margin-bottom: 4px;
+		font-size: 0.95rem;
+	}
+
 	/* ── Buttons ─────────────────────────────────── */
 	.button {
 		display: inline-flex;
@@ -940,63 +949,39 @@
 		font-size: 0.8rem;
 	}
 
-	/* ── Contact form ────────────────────────────── */
-	.contact-form {
-		display: grid;
-		gap: 14px;
-		margin-top: 12px;
-	}
-
-	.form-row {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 14px;
-	}
-
-	.contact-form label {
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-		font-size: 0.88rem;
+	/* ── Contact outside IDE ─────────────────────── */
+	.contact-outside {
+		text-align: center;
+		margin-top: 40px;
+		padding: 24px 0 0;
+		font-size: 0.95rem;
 		color: var(--muted);
+		letter-spacing: -0.01em;
 	}
 
-	.contact-form input,
-	.contact-form textarea {
-		width: 100%;
-		border: 1px solid var(--border);
-		border-radius: 10px;
-		padding: 10px 14px;
-		font-family: inherit;
-		font-size: 0.93rem;
-		color: var(--text);
-		background: var(--surface-alt);
-		transition: border-color 0.2s;
+	.contact-outside a {
+		color: #2563eb;
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		transition: color 0.2s;
 	}
 
-	.contact-form input:focus,
-	.contact-form textarea:focus {
-		outline: none;
-		border-color: #555;
-	}
-
-	.contact-form button {
-		justify-self: start;
+	.contact-outside a:hover {
+		color: #1d4ed8;
 	}
 
 	.hidden { display: none; }
 
-	/* ── Resume panel ────────────────────────────── */
-	.resume-panel {
-		display: grid;
-		gap: 16px;
+	/* ── Scroll reveal ───────────────────────────── */
+	.reveal {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: opacity 0.7s ease, transform 0.7s ease;
 	}
 
-	.resume-actions {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 12px;
-		margin-top: 4px;
+	.reveal.revealed {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	/* ── Responsive ──────────────────────────────── */
@@ -1008,18 +993,20 @@
 		.ide__sidebar {
 			border-right: none;
 			border-bottom: 1px solid var(--border);
+			position: relative;
+			max-height: none;
 		}
 
-		.span-2 {
-			grid-column: auto;
-		}
-
-		.grid {
-			padding: 20px;
+		.section-row {
+			grid-template-columns: 1fr;
 		}
 	}
 
 	@media (max-width: 600px) {
+		.hero__tagline {
+			white-space: normal;
+		}
+
 		.hero__nav {
 			flex-wrap: wrap;
 			justify-content: center;
@@ -1028,6 +1015,10 @@
 
 		.page-content {
 			padding: 40px 16px 80px;
+		}
+
+		.ide__scroll-area {
+			padding: 20px;
 		}
 	}
 </style>
